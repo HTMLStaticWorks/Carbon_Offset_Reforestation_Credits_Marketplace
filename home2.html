@@ -131,7 +131,7 @@
         <i class="ph ph-moon"></i> Theme Toggle
       </button>
       <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
-        <i class="ph ph-arrows-left-right"></i> RTL Support
+        <i class="ph ph-arrows-left-right"></i>
       </button>
       <a href="login.html" class="btn btn-primary" style="margin-top: 1rem;">Login</a>
     </div>
@@ -187,52 +187,6 @@
       </div>
     </section>
 
-    <!-- Interactive Services Section (Accordion) -->
-    <section class="section" style="background-color: var(--clr-bg);">
-      <div class="container">
-        <div class="section-header fade-up">
-          <h2>Our Solutions</h2>
-          <p>Interactive overview of our core environmental offerings.</p>
-        </div>
-        
-        <div class="interactive-accordion fade-up" style="max-width: 800px; margin: 0 auto;">
-          
-          <div class="accordion-item active">
-            <div class="accordion-header">
-              <span><i class="ph ph-house-line" style="margin-right:0.5rem;"></i> Green Roof Integration</span>
-              <i class="ph ph-caret-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <p>We build extensive and intensive green roofs tailored to your building's structural load. This promotes biodiversity, minimizes stormwater runoff, and drastically improves insulation.</p>
-              <a href="services.html" class="nav-link">View details</a>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">
-              <span><i class="ph ph-plant" style="margin-right:0.5rem;"></i> Vertical Living Walls</span>
-              <i class="ph ph-caret-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <p>Turn blank facades into lush, air-purifying natural art. Our custom vertical gardening systems bring nature to indoor and outdoor environments.</p>
-              <a href="services.html" class="nav-link">View details</a>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">
-              <span><i class="ph ph-drop" style="margin-right:0.5rem;"></i> Smart Irrigation Management</span>
-              <i class="ph ph-caret-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-              <p>Utilize IoT-enabled irrigation techniques that optimize water usage by reading real-time weather and soil moisture data, saving money and the environment.</p>
-              <a href="services.html" class="nav-link">View details</a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
 
     <!-- Visual Highlights / Features Bento Grid -->
     <section class="section">
@@ -241,8 +195,7 @@
         <style>
           .bento-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, minmax(250px, auto));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: var(--space-6);
           }
           .bento-item {
@@ -250,55 +203,34 @@
             padding: var(--space-8);
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
             overflow: hidden;
           }
           .bento-item-1 {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
             background-color: var(--clr-surface);
             border: 1px solid var(--clr-border);
-            justify-content: flex-start;
-          }
-          .bento-item-2 {
-            grid-column: 2 / 4;
-            grid-row: 1 / 2;
-            background-image: url('https://images.unsplash.com/photo-1541893322194-e81fa2db7ca9?q=80&w=1200&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            padding: 0;
-            min-height: 300px;
           }
           .bento-item-3 {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
             background-color: var(--clr-primary);
             color: #fff;
           }
           .bento-item-4 {
-            grid-column: 3 / 4;
-            grid-row: 2 / 3;
             background-color: var(--clr-accent);
             color: #fff;
+            color: var(--clr-bg);
+          }
+          .bento-item-4 h3, .bento-item-4 p {
+             color: var(--clr-bg) !important;
           }
 
           .bento-item h3 { margin-bottom: var(--space-4); }
+          .bento-icon { font-size: 3rem; margin-bottom: var(--space-4); color: var(--clr-accent); }
           
-          .bento-item-1 h3 { font-size: 2.5rem; line-height: 1.1; margin-top: var(--space-8); }
-          .bento-item-1 p { font-size: 1.125rem; color: var(--clr-text-muted); }
-          .bento-icon { font-size: 3rem; color: var(--clr-accent); }
-
           @media (max-width: 900px) {
             .bento-grid {
               grid-template-columns: 1fr;
-              grid-template-rows: auto;
             }
-            .bento-item-1, .bento-item-2, .bento-item-3, .bento-item-4 {
-              grid-column: 1 / -1;
-              grid-row: auto;
-            }
-            .bento-item-2 { min-height: 250px; }
           }
         </style>
 
@@ -307,11 +239,7 @@
           <div class="bento-item bento-item-1 fade-up">
             <i class="ph ph-bezier-curve bento-icon"></i>
             <h3>Innovative Design</h3>
-            <p>Every living wall and green roof is tailored to complement its architectural surroundings, ensuring a symbiotic aesthetic that elevates the entire property.</p>
-          </div>
-          
-          <div class="bento-item bento-item-2 fade-up">
-            <!-- Empty image container -->
+            <p style="color: var(--clr-text-muted);">Every living wall and green roof is tailored to complement its architectural surroundings, ensuring a symbiotic aesthetic that elevates the entire property.</p>
           </div>
           
           <div class="bento-item bento-item-3 fade-up">
@@ -320,8 +248,8 @@
           </div>
           
           <div class="bento-item bento-item-4 fade-up">
-            <h3 style="color:#fff;">Low Maintenance</h3>
-            <p style="color: rgba(255,255,255,0.9); margin: 0;">Integrated smart systems and resilient flora mean your green space thrives with minimal intervention on your part.</p>
+            <h3 style="color: var(--clr-bg);">Low Maintenance</h3>
+            <p style="color: rgba(10,18,14,0.9); margin: 0;">Integrated smart systems and resilient flora mean your green space thrives with minimal intervention on your part.</p>
           </div>
 
         </div>
@@ -480,7 +408,7 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); max-width: 1000px; margin: 0 auto;">
           <div class="pricing-card fade-up">
-            <span class="badge" style="background-color: rgba(217, 83, 79, 0.15); color: var(--clr-error); align-self: flex-start;">Traditional Blacktop / Bitumen</span>
+            <span class="badge" style="background-color: rgba(217, 83, 79, 0.15); color: var(--clr-error); align-self: flex-start; white-space: nowrap;">Traditional Blacktop / Bitumen</span>
             <div class="pricing-price" style="font-size: 2rem; color: var(--clr-text-main); margin-top: 1rem;">15 - 20 Yrs</div>
             <span class="pricing-period">Standard Membrane Lifespan</span>
             <ul class="pricing-features">
@@ -492,8 +420,8 @@
           </div>
 
           <div class="pricing-card featured fade-up">
-            <div class="pricing-badge-popular">Sustainable Advantage</div>
-            <span class="badge badge-primary" style="align-self: flex-start;">GreenScape Engineered Living Roof</span>
+            <div class="pricing-badge-popular" style="white-space: nowrap;">Sustainable Advantage</div>
+            <span class="badge badge-primary" style="align-self: flex-start; white-space: nowrap;">GreenScape Engineered Living Roof</span>
             <div class="pricing-price" style="font-size: 2rem; margin-top: 1rem;">50+ Yrs</div>
             <span class="pricing-period">Protected Membrane Lifespan</span>
             <ul class="pricing-features">
@@ -525,7 +453,7 @@
             <span class="badge badge-primary"><i class="ph ph-broadcast"></i> Connected to Cloud</span>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-6);">
+          <div class="telemetry-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-6);">
             <div style="background-color: var(--clr-bg); padding: var(--space-4); border-radius: var(--radius-main); border: 1px solid var(--clr-border);">
               <span style="font-size: 0.8rem; color: var(--clr-text-muted); text-transform: uppercase; font-weight: 700;">Substrate Moisture</span>
               <div style="font-size: 1.75rem; font-weight: 700; color: var(--clr-primary); margin-top: 0.25rem;">42% <span style="font-size: 0.85rem; color: var(--clr-success); font-weight: 600;">Optimal</span></div>
@@ -576,13 +504,60 @@
         </div>
       </div>
     </section>
+    <!-- Interactive Services Section (Accordion) -->
+    <section class="section" style="background-color: var(--clr-bg);">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Our Solutions</h2>
+          <p>Interactive overview of our core environmental offerings.</p>
+        </div>
+        
+        <div class="interactive-accordion fade-up" style="max-width: 800px; margin: 0 auto;">
+          
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span><i class="ph ph-house-line" style="margin-right:0.5rem;"></i> Green Roof Integration</span>
+              <i class="ph ph-caret-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p>We build extensive and intensive green roofs tailored to your building's structural load. This promotes biodiversity, minimizes stormwater runoff, and drastically improves insulation.</p>
+              <a href="services.html" class="nav-link">View details</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span><i class="ph ph-plant" style="margin-right:0.5rem;"></i> Vertical Living Walls</span>
+              <i class="ph ph-caret-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Turn blank facades into lush, air-purifying natural art. Our custom vertical gardening systems bring nature to indoor and outdoor environments.</p>
+              <a href="services.html" class="nav-link">View details</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span><i class="ph ph-drop" style="margin-right:0.5rem;"></i> Smart Irrigation Management</span>
+              <i class="ph ph-caret-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Utilize IoT-enabled irrigation techniques that optimize water usage by reading real-time weather and soil moisture data, saving money and the environment.</p>
+              <a href="services.html" class="nav-link">View details</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 1.5rem; display: inline-flex;">
+          <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem; display: inline-flex;">
             <i class="ph-fill ph-leaf"></i> GreenScape
           </a>
           <p>Pioneering sustainable urban environments through bespoke green roofs and living walls.</p>
@@ -605,11 +580,12 @@
           <h4>Connect</h4>
           <a href="#" class="footer-link"><i class="ph ph-instagram-logo"></i> Instagram</a>
           <a href="#" class="footer-link"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
-          <a href="#" class="footer-link"><i class="ph ph-twitter-logo"></i> Twitter</a>
+          <a href="#" class="footer-link"><i class="ph ph-x-logo"></i> Twitter</a>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 GreenScape Living. All rights reserved.</p>
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="btn btn-primary" style="padding: 0.5rem 1rem;">Back to Top <i class="ph ph-arrow-up" style="margin-left: 0.25rem;"></i></button>
       </div>
     </div>
   </footer>
@@ -639,4 +615,5 @@
   </script>
 </body>
 </html>
+
 

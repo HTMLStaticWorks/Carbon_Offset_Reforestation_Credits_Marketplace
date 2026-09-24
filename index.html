@@ -42,7 +42,7 @@
         <i class="ph ph-moon"></i> Theme Toggle
       </button>
       <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
-        <i class="ph ph-arrows-left-right"></i> RTL Support
+        <i class="ph ph-arrows-left-right"></i>
       </button>
       <a href="login.html" class="btn btn-primary" style="margin-top: 1rem;">Login</a>
     </div>
@@ -146,8 +146,8 @@
             <p>With over a decade of experience in botanical design and structural engineering, we seamlessly integrate living ecosystems into urban environments. Our mission is to restore the balance between nature and concrete, creating spaces that are aesthetically stunning and ecologically sound.</p>
             <a href="about.html" class="btn btn-secondary" style="margin-top: var(--space-4);">Read Our Story</a>
           </div>
-          <div class="fade-up">
-            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop" alt="Green architecture" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main);">
+          <div class="fade-up" style="text-align: center;">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop" alt="Green architecture" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main); max-width: 80%; height: auto; margin: 0 auto;">
           </div>
         </div>
       </div>
@@ -219,6 +219,20 @@
               <div>
                 <h4 style="font-size: 1rem; margin-bottom: 0;">Mark D.</h4>
                 <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Homeowner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="align-items: flex-start; text-align: left;">
+            <div style="color: var(--clr-accent); font-size: 1.5rem; margin-bottom: 1rem;">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p>"The smart irrigation system has been a game-changer for our urban rooftop. Water usage dropped by 40% in just two months. Highly recommended!"</p>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0;">David R.</h4>
+                <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Property Developer</span>
               </div>
             </div>
           </div>
@@ -551,7 +565,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 1.5rem; display: inline-flex;">
+          <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem; display: inline-flex;">
             <i class="ph-fill ph-leaf"></i> GreenScape
           </a>
           <p>Pioneering sustainable urban environments through bespoke green roofs and living walls.</p>
@@ -574,11 +588,12 @@
           <h4>Connect</h4>
           <a href="#" class="footer-link"><i class="ph ph-instagram-logo"></i> Instagram</a>
           <a href="#" class="footer-link"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
-          <a href="#" class="footer-link"><i class="ph ph-twitter-logo"></i> Twitter</a>
+          <a href="#" class="footer-link"><i class="ph ph-x-logo"></i> Twitter</a>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 GreenScape Living. All rights reserved.</p>
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="btn btn-primary" style="padding: 0.5rem 1rem;">Back to Top <i class="ph ph-arrow-up" style="margin-left: 0.25rem;"></i></button>
       </div>
     </div>
   </footer>
@@ -590,4 +605,5 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
