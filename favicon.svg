@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b3d18"/>
+      <stop offset="100%" stop-color="#0d200c"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#387a2c"/>
+      <stop offset="55%" stop-color="#64ab3b"/>
+      <stop offset="100%" stop-color="#95e042"/>
+    </linearGradient>
+    <linearGradient id="veinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#bdfa6b" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded Squircle Badge ensures crisp legibility across light, gray, and dark browser tabs -->
+  <rect width="64" height="64" rx="16" fill="url(#badgeGrad)"/>
+  <rect width="60" height="60" x="2" y="2" rx="14" fill="none" stroke="rgba(149, 224, 66, 0.35)" stroke-width="1.5"/>
+  <!-- Biophilic Architectural Leaf Shape -->
+  <path d="M17 47 C 17 27, 30 14, 47 14 C 47 34, 37 47, 17 47 Z" fill="url(#leafGrad)"/>
+  <!-- Central Structural Stem Line -->
+  <path d="M17 47 Q 31 33 47 14" fill="none" stroke="url(#veinGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Structural Side Veins -->
+  <path d="M26 38 Q 34 37 39 41" fill="none" stroke="url(#veinGrad)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M33 30 Q 40 28 44 31" fill="none" stroke="url(#veinGrad)" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Glowing Sprout Accent -->
+  <circle cx="47.5" cy="13.5" r="2.5" fill="#bdfa6b"/>
+</svg>

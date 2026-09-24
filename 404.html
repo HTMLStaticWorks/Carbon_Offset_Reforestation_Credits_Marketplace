@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Not Found | GreenScape Living</title>
+  <meta name="description" content="The page you are looking for does not exist. Explore our living architecture solutions.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Mobile Hamburger Drawer -->
+  <nav class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <a href="index.html" class="nav-logo">
+        <i class="ph-fill ph-leaf"></i> GreenScape
+      </a>
+      <button class="btn-icon btn-toggle-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <div class="drawer-links">
+      <a href="index.html" class="drawer-link nav-link">Home</a>
+      <a href="home2.html" class="drawer-link nav-link">Home 2</a>
+      <a href="services.html" class="drawer-link nav-link">Services</a>
+      <a href="about.html" class="drawer-link nav-link">About Us</a>
+      <a href="blog.html" class="drawer-link nav-link">Blog</a>
+      <a href="contact.html" class="drawer-link nav-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i> Theme Toggle
+      </button>
+      <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i> RTL Support
+      </button>
+      <a href="login.html" class="btn btn-primary" style="margin-top: 1rem;">Login</a>
+    </div>
+  </nav>
+
+  <!-- Desktop Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="ph-fill ph-leaf"></i> GreenScape
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+
+      <button class="btn-icon hamburger btn-toggle-drawer" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Hero & Search Bar Section -->
+    <section class="section" style="padding-top: 160px; padding-bottom: var(--space-12); text-align: center; background-color: var(--clr-surface);">
+      <div class="container fade-up" style="max-width: 650px; margin: 0 auto;">
+        <div class="error-code" style="font-size: clamp(6rem, 10vw, 8rem); font-family: var(--font-heading); font-weight: 800; line-height: 1; margin-bottom: 0;">404</div>
+        <h1 style="font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: var(--space-4);">This Botanical Path Hasn't Blossomed</h1>
+        <p class="lead-text" style="margin-bottom: var(--space-8);">The page or document you requested might have been transplanted or retired. Try searching our journal or exploring key destinations below.</p>
+        
+        <form action="blog.html" method="get" style="display: flex; gap: var(--space-2); max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+          <input type="text" class="form-control" placeholder="Search green roofs, living walls, case studies..." style="flex: 1; min-width: 220px;" required>
+          <button type="submit" class="btn btn-primary"><i class="ph ph-magnifying-glass"></i> Search</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section 2: Popular Architectural Destinations Directory -->
+    <section class="section" id="popular-links">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 600px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Explore GreenScape</span>
+          <h2>Popular Architectural Destinations</h2>
+          <p>Quick pathways back to our core services, tools, and technical resources.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6);">
+          <a href="services.html" class="card fade-up" style="text-align: center; padding: var(--space-8);">
+            <div class="card-icon" style="margin: 0 auto var(--space-4);"><i class="ph ph-house-line"></i></div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Services & Systems</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 0;">Compare extensive green roofs, living walls, and automated smart irrigation.</p>
+          </a>
+
+          <a href="index.html#calculator" class="card fade-up" style="text-align: center; padding: var(--space-8);">
+            <div class="card-icon" style="margin: 0 auto var(--space-4);"><i class="ph ph-calculator"></i></div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Carbon & ROI Calculator</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 0;">Calculate estimated annual CO2 capture, utility savings, and stormwater retention.</p>
+          </a>
+
+          <a href="about.html" class="card fade-up" style="text-align: center; padding: var(--space-8);">
+            <div class="card-icon" style="margin: 0 auto var(--space-4);"><i class="ph ph-users-three"></i></div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Our Story & Team</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 0;">Discover our decade of biophilic design and meet our botanical engineers.</p>
+          </a>
+
+          <a href="blog.html" class="card fade-up" style="text-align: center; padding: var(--space-8);">
+            <div class="card-icon" style="margin: 0 auto var(--space-4);"><i class="ph ph-article"></i></div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Technical Journal</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 0;">Insights on tax credits, structural load calculations, and urban microclimates.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 1.5rem; display: inline-flex;">
+            <i class="ph-fill ph-leaf"></i> GreenScape
+          </a>
+          <p>Pioneering sustainable urban environments through bespoke green roofs and living walls.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="blog.html" class="footer-link">Journal</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html" class="footer-link">Green Roofs</a>
+          <a href="services.html" class="footer-link">Living Walls</a>
+          <a href="services.html" class="footer-link">Irrigation</a>
+          <a href="services.html" class="footer-link">Maintenance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#" class="footer-link"><i class="ph ph-instagram-logo"></i> Instagram</a>
+          <a href="#" class="footer-link"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
+          <a href="#" class="footer-link"><i class="ph ph-twitter-logo"></i> Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GreenScape Living. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

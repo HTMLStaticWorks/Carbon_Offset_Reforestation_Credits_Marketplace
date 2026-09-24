@@ -1,0 +1,48 @@
+/* 
+  GreenScape Living - rtl.css 
+  RTL Support Overrides
+*/
+
+html[dir="rtl"], .rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .nav-logo {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-drawer {
+  right: auto;
+  left: -100%;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+}
+
+html[dir="rtl"] .nav-drawer.open {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .drawer-actions .btn-icon {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+html[dir="rtl"] .auth-divider::before {
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+
+html[dir="rtl"] .auth-divider::after {
+  margin-left: 0;
+  margin-right: 0.5em;
+}
+
+html[dir="rtl"] .footer-link:hover {
+  transform: translateX(-4px);
+}

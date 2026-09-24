@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | GreenScape Living</title>
+  <meta name="description" content="Learn about our mission, vision, and the journey of bringing nature back to urban spaces.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .page-header {
+      padding-top: 150px;
+      padding-bottom: 80px;
+      background-color: var(--clr-primary);
+      color: #fff;
+      text-align: center;
+    }
+    .page-header h1 {
+      color: #fff;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: var(--clr-border);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 50%;
+      position: relative;
+      margin-bottom: var(--space-8);
+    }
+    .timeline-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-right: 0;
+      padding-left: 50%;
+    }
+    .timeline-content {
+      width: 90%;
+      background-color: var(--clr-surface);
+      padding: var(--space-6);
+      border-radius: var(--radius-main);
+      border: 1px solid var(--clr-border);
+      position: relative;
+    }
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -25px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--clr-accent);
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item:nth-child(even) .timeline-content::before {
+      left: -25px;
+    }
+    [dir="rtl"] .timeline-item {
+      padding-right: 0;
+      padding-left: 50%;
+      justify-content: flex-start;
+    }
+    [dir="rtl"] .timeline-item:nth-child(even) {
+      padding-left: 0;
+      padding-right: 50%;
+      justify-content: flex-end;
+    }
+    [dir="rtl"] .timeline-content::before {
+      left: -25px;
+      right: auto;
+    }
+    [dir="rtl"] .timeline-item:nth-child(even) .timeline-content::before {
+      right: -25px;
+      left: auto;
+    }
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item, .timeline-item:nth-child(even) {
+        padding-left: 50px;
+        padding-right: 0;
+        justify-content: flex-start;
+      }
+      .timeline-content { width: 100%; }
+      .timeline-content::before, .timeline-item:nth-child(even) .timeline-content::before {
+        left: -35px;
+      }
+      [dir="rtl"] .timeline::before {
+        right: 20px;
+        left: auto;
+      }
+      [dir="rtl"] .timeline-item, [dir="rtl"] .timeline-item:nth-child(even) {
+        padding-right: 50px;
+        padding-left: 0;
+      }
+      [dir="rtl"] .timeline-content::before, [dir="rtl"] .timeline-item:nth-child(even) .timeline-content::before {
+        right: -35px;
+        left: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mobile Hamburger Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <nav class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <a href="index.html" class="nav-logo">
+        <i class="ph-fill ph-leaf"></i> GreenScape
+      </a>
+      <button class="btn-icon btn-toggle-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <div class="drawer-links">
+      <a href="index.html" class="drawer-link nav-link">Home</a>
+      <a href="home2.html" class="drawer-link nav-link">Home 2</a>
+      <a href="services.html" class="drawer-link nav-link">Services</a>
+      <a href="about.html" class="drawer-link nav-link active">About Us</a>
+      <a href="blog.html" class="drawer-link nav-link">Blog</a>
+      <a href="contact.html" class="drawer-link nav-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i> Theme Toggle
+      </button>
+      <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i> RTL Support
+      </button>
+      <a href="login.html" class="btn btn-primary" style="margin-top: 1rem;">Login</a>
+    </div>
+  </nav>
+
+  <!-- Desktop Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="ph-fill ph-leaf"></i> GreenScape
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+      </div>
+      <button class="btn-icon hamburger btn-toggle-drawer" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container fade-up">
+        <h1>Our Story</h1>
+        <p class="lead-text" style="color: rgba(255,255,255,0.8);">Reimagining the concrete jungle.</p>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-12); align-items: center;">
+          <div class="fade-up">
+            <h2>Mission & Vision</h2>
+            <p>Our mission is simple: to weave natural ecosystems into the fabric of urban environments. We envision cities where rooftops and walls are not just structural necessities, but living, breathing contributors to the local ecology.</p>
+            <p>Every project we undertake is a step towards reducing urban heat islands, improving air quality, and promoting biophilic design that enhances human well-being.</p>
+          </div>
+          <div class="fade-up">
+            <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800&auto=format&fit=crop" alt="Green architecture mission" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline / Milestones -->
+    <section class="section" style="background-color: var(--clr-bg);">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Our Journey</h2>
+          <p>From a small botanical design firm to industry leaders in living architecture.</p>
+        </div>
+
+        <div class="timeline fade-up">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>2015: The Seed</h3>
+              <p>Founded by a group of passionate botanists and structural engineers with a single pilot project in a small urban courtyard.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>2018: Growth Spurt</h3>
+              <p>Successfully completed our 100th living wall installation and expanded our services to include intensive green roofs.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>2021: Smart Integration</h3>
+              <p>Launched our proprietary IoT smart irrigation system, setting a new standard for low-maintenance vertical gardens.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>2026: Greening the Future</h3>
+              <p>Recognized globally for sustainable urban design. We continue to innovate and expand our ecological footprint.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Botanical Engineers Section -->
+    <section class="section" id="team" style="background-color: var(--clr-surface);">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">The Pioneers</span>
+          <h2>Meet Our Ecological Architects & Engineers</h2>
+          <p>A multidisciplinary collective of botanists, licensed structural engineers, and IoT technologists dedicated to urban re-wilding.</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card fade-up">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Dr. Julian Thorne" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Dr. Julian Thorne</h3>
+              <div class="team-role">Co-Founder & Chief Eco-Architect</div>
+              <p style="font-size: 0.9rem;">Former MIT lecturer in biomimetic structures. Pioneer of lightweight honeycomb cassette engineering.</p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+                <a href="#" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card fade-up">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Elena Rossi" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Elena Rossi, M.Sc.</h3>
+              <div class="team-role">Head of Botanical Science</div>
+              <p style="font-size: 0.9rem;">Specialist in sub-alpine flora and microclimate plant physiology. Author of 12 peer-reviewed botany papers.</p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+                <a href="#" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card fade-up">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Marcus Vance" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Marcus Vance, P.E.</h3>
+              <div class="team-role">Director of Structural Engineering</div>
+              <p style="font-size: 0.9rem;">18 years overseeing seismic tolerances, wind-shear deflection, and multi-barrier waterproofing membranes.</p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+                <a href="#" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card fade-up">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Amara Okafor" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Amara Okafor</h3>
+              <div class="team-role">VP of Smart IoT Systems</div>
+              <p style="font-size: 0.9rem;">Architect of our automated cloud telemetry infrastructure, sensor nodes, and satellite weather-based fertigation.</p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+                <a href="#" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values & Ecological Philosophy Section -->
+    <section class="section" id="values">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Guiding Principles</span>
+          <h2>Our Ecological Philosophy</h2>
+          <p>Every blueprint we draft is governed by five non-negotiable commitments to ecological integrity and durability.</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card fade-up">
+            <div class="value-icon"><i class="ph ph-butterfly"></i></div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Native Biodiversity</h3>
+            <p style="font-size: 0.9rem;">We restore native pollinator pathways by reintroducing local flora, sheltering bees, hummingbirds, and beneficial insect fauna.</p>
+          </div>
+
+          <div class="value-card fade-up">
+            <div class="value-icon"><i class="ph ph-recycle"></i></div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Circular Materials</h3>
+            <p style="font-size: 0.9rem;">Our drainage cells are pressed from 100% post-consumer recycled ocean polymers, achieving net negative lifecycle carbon.</p>
+          </div>
+
+          <div class="value-card fade-up">
+            <div class="value-icon"><i class="ph ph-cloud-rain"></i></div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Zero Runoff Priority</h3>
+            <p style="font-size: 0.9rem;">Every installation serves as an urban sponge, buffering torrential stormwater and preventing combined sewer overflow events.</p>
+          </div>
+
+          <div class="value-card fade-up">
+            <div class="value-icon"><i class="ph ph-chart-line-up"></i></div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Radical Telemetry</h3>
+            <p style="font-size: 0.9rem;">No guesswork. We continuously audit soil moisture, ambient temperature, and carbon sequestration with open client dashboards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Nursery & Lab Section -->
+    <section class="section" style="background-color: var(--clr-surface); padding-block: var(--space-16);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-12); align-items: center;">
+          <div class="fade-up">
+            <span class="eyebrow">Our Botanical Laboratory</span>
+            <h2>20 Acres of High-Stress Plant Cultivation</h2>
+            <p class="lead-text">Before a plant enters an urban rooftop, it spends up to 18 months acclimating in our climate simulation greenhouses.</p>
+            <p>Located in the Skagit Valley, our experimental research nursery subjects flora cultivars to rapid freeze-thaw cycles, high wind simulation, and simulated prolonged droughts. Only cultivars that maintain 99%+ vitality are approved for client architectural installations.</p>
+            <div style="display: flex; gap: var(--space-6); margin-top: var(--space-6);">
+              <div>
+                <h4 style="font-size: 2rem; color: var(--clr-primary); line-height: 1; margin-bottom: 0.25rem;">120+</h4>
+                <span style="font-size: 0.85rem; color: var(--clr-text-muted);">Acclimatized Cultivars</span>
+              </div>
+              <div style="border-left: 1px solid var(--clr-border); padding-left: var(--space-6);">
+                <h4 style="font-size: 2rem; color: var(--clr-primary); line-height: 1; margin-bottom: 0.25rem;">100%</h4>
+                <span style="font-size: 0.85rem; color: var(--clr-text-muted);">Pesticide-Free Living Stock</span>
+              </div>
+            </div>
+          </div>
+          <div class="fade-up">
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=800&auto=format&fit=crop" alt="Greenhouse Botanical Nursery" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accreditations, Awards & Certifications Section -->
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Industry Recognition</span>
+          <h2>Global Accreditations & Standards</h2>
+          <p>Certified by the highest international bodies in green architecture and environmental safety.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-6);">
+          <div class="card fade-up" style="padding: var(--space-6); text-align: center;">
+            <i class="ph-fill ph-medal" style="font-size: 2.5rem; color: var(--clr-accent); margin-bottom: 0.5rem;"></i>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">LEED Platinum Partner</h4>
+            <p style="font-size: 0.85rem; margin: 0;">U.S. Green Building Council Verified Provider 2024</p>
+          </div>
+
+          <div class="card fade-up" style="padding: var(--space-6); text-align: center;">
+            <i class="ph-fill ph-trophy" style="font-size: 2.5rem; color: var(--clr-accent); margin-bottom: 0.5rem;"></i>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">World Green Infra Award</h4>
+            <p style="font-size: 0.85rem; margin: 0;">Best Living Wall Architecture Project Winner 2025</p>
+          </div>
+
+          <div class="card fade-up" style="padding: var(--space-6); text-align: center;">
+            <i class="ph-fill ph-certificate" style="font-size: 2.5rem; color: var(--clr-accent); margin-bottom: 0.5rem;"></i>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">ISO 14001 Certified</h4>
+            <p style="font-size: 0.85rem; margin: 0;">International Standard for Environmental Management</p>
+          </div>
+
+          <div class="card fade-up" style="padding: var(--space-6); text-align: center;">
+            <i class="ph-fill ph-shield-check" style="font-size: 2.5rem; color: var(--clr-accent); margin-bottom: 0.5rem;"></i>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Living Building Challenge</h4>
+            <p style="font-size: 0.85rem; margin: 0;">Net-Positive Water & Biophilic Standard Compliant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Annual Impact Report & Community Initiative Section -->
+    <section class="section" style="background-color: var(--clr-surface); border-top: 1px solid var(--clr-border);">
+      <div class="container fade-up">
+        <div class="download-resource-box">
+          <div>
+            <span class="badge" style="background-color: rgba(255,255,255,0.2); color: #fff; margin-bottom: 0.5rem;">Annual Transparency</span>
+            <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Download Our 2026 Urban Greening Impact Report</h3>
+            <p style="margin: 0; max-width: 650px;">A detailed 64-page analysis of municipal heat mitigation, biodiversity counts, and carbon capture metrics across our entire project registry.</p>
+          </div>
+          <a href="contact.html" class="btn btn-secondary" style="color: #fff; border-color: #fff; white-space: nowrap;"><i class="ph ph-file-arrow-down"></i> Request Whitepaper (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Section 1: Partner Marquee -->
+    <section class="section" style="padding-block: var(--space-8); border-top: 1px solid var(--clr-border);">
+      <div class="container fade-up" style="text-align: center; margin-bottom: var(--space-6);">
+        <p class="label-text" style="color: var(--clr-text-muted);">Trusted by Eco-Pioneers Worldwide</p>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee">
+          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
+          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
+          <i class="ph ph-drop"></i><span>AquaSmart</span>
+          <i class="ph ph-sun"></i><span>Solaris</span>
+          <i class="ph ph-leaf"></i><span>Natura</span>
+          <!-- Duplicate for infinite scroll -->
+          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
+          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
+          <i class="ph ph-drop"></i><span>AquaSmart</span>
+          <i class="ph ph-sun"></i><span>Solaris</span>
+          <i class="ph ph-leaf"></i><span>Natura</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 1.5rem; display: inline-flex;">
+            <i class="ph-fill ph-leaf"></i> GreenScape
+          </a>
+          <p>Pioneering sustainable urban environments through bespoke green roofs and living walls.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="blog.html" class="footer-link">Journal</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html" class="footer-link">Green Roofs</a>
+          <a href="services.html" class="footer-link">Living Walls</a>
+          <a href="services.html" class="footer-link">Irrigation</a>
+          <a href="services.html" class="footer-link">Maintenance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#" class="footer-link"><i class="ph ph-instagram-logo"></i> Instagram</a>
+          <a href="#" class="footer-link"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
+          <a href="#" class="footer-link"><i class="ph ph-twitter-logo"></i> Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GreenScape Living. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

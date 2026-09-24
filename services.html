@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | GreenScape Living</title>
+  <meta name="description" content="Explore our green roof, living wall, and smart irrigation services.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .page-header {
+      padding-top: 150px;
+      padding-bottom: 80px;
+      background-color: var(--clr-primary);
+      color: #fff;
+      text-align: center;
+    }
+    .page-header h1 {
+      color: #fff;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: var(--space-8);
+      background-color: var(--clr-surface);
+      border-radius: var(--radius-main);
+      overflow: hidden;
+      box-shadow: var(--shadow-main);
+    }
+    
+    .comparison-table th, .comparison-table td {
+      padding: var(--space-4);
+      border-bottom: 1px solid var(--clr-border);
+      text-align: center;
+    }
+    
+    .comparison-table th {
+      background-color: var(--clr-primary);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: var(--weight-h4);
+    }
+    
+    .comparison-table td:first-child {
+      text-align: left;
+      font-weight: var(--weight-bold-inline);
+      color: var(--clr-text-main);
+    }
+    [dir="rtl"] .comparison-table td:first-child {
+      text-align: right;
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    @media (max-width: 768px) {
+      .comparison-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mobile Hamburger Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <nav class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <a href="index.html" class="nav-logo">
+        <i class="ph-fill ph-leaf"></i> GreenScape
+      </a>
+      <button class="btn-icon btn-toggle-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <div class="drawer-links">
+      <a href="index.html" class="drawer-link nav-link">Home</a>
+      <a href="home2.html" class="drawer-link nav-link">Home 2</a>
+      <a href="services.html" class="drawer-link nav-link active">Services</a>
+      <a href="about.html" class="drawer-link nav-link">About Us</a>
+      <a href="blog.html" class="drawer-link nav-link">Blog</a>
+      <a href="contact.html" class="drawer-link nav-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i> Theme Toggle
+      </button>
+      <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i> RTL Support
+      </button>
+      <a href="login.html" class="btn btn-primary" style="margin-top: 1rem;">Login</a>
+    </div>
+  </nav>
+
+  <!-- Desktop Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="ph-fill ph-leaf"></i> GreenScape
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+      </div>
+      <button class="btn-icon hamburger btn-toggle-drawer" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container fade-up">
+        <h1>Our Services</h1>
+        <p class="lead-text" style="color: rgba(255,255,255,0.8);">Comprehensive eco-architectural solutions.</p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="card-grid fade-up">
+          <div class="card">
+            <div class="card-icon">
+              <i class="ph ph-house-line"></i>
+            </div>
+            <h3>Intensive Green Roofs</h3>
+            <p>Deep soil installations designed for accessibility, featuring shrubs, small trees, and walkways. Perfect for commercial building amenities.</p>
+          </div>
+          
+          <div class="card">
+            <div class="card-icon">
+              <i class="ph ph-leaf"></i>
+            </div>
+            <h3>Extensive Green Roofs</h3>
+            <p>Lightweight, low-maintenance living roofs featuring sedums and hardy flora. Ideal for residential or industrial roofs unable to bear heavy loads.</p>
+          </div>
+          
+          <div class="card">
+            <div class="card-icon">
+              <i class="ph ph-plant"></i>
+            </div>
+            <h3>Outdoor Living Walls</h3>
+            <p>Transform exterior facades into lush vertical gardens that improve insulation, reduce noise, and create stunning visual impact.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="ph ph-potted-plant"></i>
+            </div>
+            <h3>Indoor Living Walls</h3>
+            <p>Bring nature indoors with custom vertical gardens that purify the air and boost wellness in office or residential environments.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="ph ph-drop"></i>
+            </div>
+            <h3>Smart Irrigation</h3>
+            <p>Automated, sensor-driven watering systems that ensure your plants thrive while conserving water and reducing manual labor.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="ph ph-wrench"></i>
+            </div>
+            <h3>Maintenance & Care</h3>
+            <p>Ongoing support, pruning, fertilizing, and system checks to keep your living architecture vibrant year-round.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="section" style="background-color: var(--clr-bg);">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Which System is Right For You?</h2>
+          <p>Compare our core green roof installations.</p>
+        </div>
+
+        <div class="fade-up" style="max-width: 900px; margin: 0 auto;">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Extensive Roof</th>
+                <th>Intensive Roof</th>
+                <th>Living Wall</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Soil Depth</td>
+                <td>2-6 inches</td>
+                <td>6-24+ inches</td>
+                <td>Hydroponic/Felt</td>
+              </tr>
+              <tr>
+                <td>Weight Load</td>
+                <td>Low (15-30 lbs/sq ft)</td>
+                <td>High (80-150+ lbs/sq ft)</td>
+                <td>Wall Structural</td>
+              </tr>
+              <tr>
+                <td>Plant Types</td>
+                <td>Sedums, Moss, Herbs</td>
+                <td>Shrubs, Trees, Lawns</td>
+                <td>Ferns, Vines, Tropicals</td>
+              </tr>
+              <tr>
+                <td>Maintenance</td>
+                <td>Very Low</td>
+                <td>High (Like a regular garden)</td>
+                <td>Medium (Automated watering)</td>
+              </tr>
+              <tr>
+                <td>Accessibility</td>
+                <td>Usually Visual Only</td>
+                <td>Fully Accessible/Recreational</td>
+                <td>Visual Only</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ongoing Maintenance & Plant Stewardship Tier Plans -->
+    <section class="section" id="maintenance-tiers" style="background-color: var(--clr-surface);">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Year-Round Vitality</span>
+          <h2>Managed Botanical Stewardship Plans</h2>
+          <p>Protect your investment with dedicated horticultural care, automated health telemetry, and guaranteed plant replacements.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card fade-up">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Essential Care</h3>
+            <p style="font-size: 0.85rem; color: var(--clr-text-muted);">For low-maintenance extensive sedum green roofs.</p>
+            <div class="pricing-price">$180 <span class="pricing-period">/ visit</span></div>
+            <ul class="pricing-features">
+              <li><i class="ph-fill ph-check-circle"></i> Bi-annual seasonal inspections</li>
+              <li><i class="ph-fill ph-check-circle"></i> Organic weeding and debris clearance</li>
+              <li><i class="ph-fill ph-check-circle"></i> Drainage outlet flow check</li>
+              <li><i class="ph-fill ph-check-circle"></i> Slow-release nutrient rebalancing</li>
+              <li><i class="ph-fill ph-check-circle"></i> Detailed photographic health report</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" style="margin-top: auto; text-align: center;">Choose Essential</a>
+          </div>
+
+          <div class="pricing-card featured fade-up">
+            <div class="pricing-badge-popular">Most Popular</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Comprehensive Growth</h3>
+            <p style="font-size: 0.85rem; color: var(--clr-text-muted);">For active residential green roofs and outdoor living walls.</p>
+            <div class="pricing-price">$350 <span class="pricing-period">/ month</span></div>
+            <ul class="pricing-features">
+              <li><i class="ph-fill ph-check-circle"></i> Monthly dedicated horticultural technician</li>
+              <li><i class="ph-fill ph-check-circle"></i> Selective hand pruning & deadheading</li>
+              <li><i class="ph-fill ph-check-circle"></i> 100% complimentary plant replacements</li>
+              <li><i class="ph-fill ph-check-circle"></i> Irrigation valve pressure calibration</li>
+              <li><i class="ph-fill ph-check-circle"></i> Organic pest barrier treatments</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: auto; text-align: center;">Choose Comprehensive</a>
+          </div>
+
+          <div class="pricing-card fade-up">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Smart IoT Platinum</h3>
+            <p style="font-size: 0.85rem; color: var(--clr-text-muted);">For high-profile commercial atriums and corporate towers.</p>
+            <div class="pricing-price">$720 <span class="pricing-period">/ month</span></div>
+            <ul class="pricing-features">
+              <li><i class="ph-fill ph-check-circle"></i> 24/7 continuous sensor telemetry monitoring</li>
+              <li><i class="ph-fill ph-check-circle"></i> Weekly specialized botanical manicuring</li>
+              <li><i class="ph-fill ph-check-circle"></i> Automated precision fertigation refill</li>
+              <li><i class="ph-fill ph-check-circle"></i> 2-hour emergency leak response SLA</li>
+              <li><i class="ph-fill ph-check-circle"></i> Annual LEED & ESG carbon audit certification</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary" style="margin-top: auto; text-align: center;">Choose Platinum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Turnkey 5-Phase Project Delivery Roadmap Section -->
+    <section class="section" id="delivery-process">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Seamless Execution</span>
+          <h2>Turnkey 5-Phase Project Roadmap</h2>
+          <p>Our standardized engineering workflow ensures flawless architectural integration on schedule and on budget.</p>
+        </div>
+
+        <div class="phases-grid">
+          <div class="phase-card fade-up">
+            <div class="phase-card-tag">Phase 01</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Structural Audit</h3>
+            <p style="font-size: 0.85rem;">Laser LIDAR scans, structural dead/live load verification, and municipal permit clearance.</p>
+          </div>
+
+          <div class="phase-card fade-up">
+            <div class="phase-card-tag">Phase 02</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Microclimate CAD</h3>
+            <p style="font-size: 0.85rem;">Solar azimuth path modeling, wind pressure mapping, and botanical species zoning.</p>
+          </div>
+
+          <div class="phase-card fade-up">
+            <div class="phase-card-tag">Phase 03</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Pre-Cultivation</h3>
+            <p style="font-size: 0.85rem;">Interlocking cassette pre-growing in our nursery to guarantee 95%+ mature plant density.</p>
+          </div>
+
+          <div class="phase-card fade-up">
+            <div class="phase-card-tag">Phase 04</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Rapid Assembly</h3>
+            <p style="font-size: 0.85rem;">Watertight membrane laying, drainage installation, and crane hoist placement in days.</p>
+          </div>
+
+          <div class="phase-card fade-up">
+            <div class="phase-card-tag">Phase 05</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">IoT Commissioning</h3>
+            <p style="font-size: 0.85rem;">Sensor calibration, client dashboard access, and lifetime botanical care commencement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart Irrigation & Closed-Loop Hydroponic Spotlight Section -->
+    <section class="section" style="background-color: var(--clr-surface); padding-block: var(--space-16);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-12); align-items: center;">
+          <div class="fade-up">
+            <span class="eyebrow">Next-Gen Hydroponics</span>
+            <h2>Closed-Loop Sensor Driven Precision Irrigation</h2>
+            <p class="lead-text">Conserving up to 75% more water than conventional sprinkler systems.</p>
+            <p>Our proprietary living wall irrigation modules operate on a closed-loop recirculating sub-irrigation matrix. Buried capacitive sensors sample volumetric water content 60 times an hour, automatically withholding water if natural rain is forecast or delivering micro-doses of organic nutrients precisely when transpiration demands spike.</p>
+            <ul style="margin-top: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2);">
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph-fill ph-check-circle" style="color: var(--clr-secondary);"></i> <strong>Satellite Weather Integration:</strong> Suspends cycles during rainfall</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph-fill ph-check-circle" style="color: var(--clr-secondary);"></i> <strong>Pressure Regulated Drippers:</strong> Uniform moisture across 100 vertical feet</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><i class="ph-fill ph-check-circle" style="color: var(--clr-secondary);"></i> <strong>Early Warning Alerts:</strong> Instant SMS/email notifications for flow anomalies</li>
+            </ul>
+          </div>
+          <div class="fade-up">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop" alt="Smart Irrigation Living Wall" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineered Mineral Substrate Standards Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Material Science</span>
+          <h2>Why Engineered Substrate Beats Regular Soil</h2>
+          <p>Never put regular topsoil on a roof. Discover why our FLL-certified mineral substrates are engineered for structural safety and botanical longevity.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6);">
+          <div class="card fade-up">
+            <div class="card-icon"><i class="ph ph-feather"></i></div>
+            <h3 style="font-size: 1.25rem;">Ultralight Weight Load</h3>
+            <p>Weighs 65% less than typical garden soil when saturated, protecting building joists and eliminating costly structural retrofits.</p>
+          </div>
+
+          <div class="card fade-up">
+            <div class="card-icon"><i class="ph ph-arrows-out-line-horizontal"></i></div>
+            <h3 style="font-size: 1.25rem;">Zero Slumping or Compacting</h3>
+            <p>Formulated with stable expanded slate and porous volcanic pumice that maintains 40% air pore space for root respiration indefinitely.</p>
+          </div>
+
+          <div class="card fade-up">
+            <div class="card-icon"><i class="ph ph-flame"></i></div>
+            <h3 style="font-size: 1.25rem;">Class-A Fire Retardant</h3>
+            <p>Complies with rigorous ASTM E108 Class A fire testing. Mineral composition acts as a natural rooftop firestop in urban settings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Readiness Self-Assessment Checklist Section -->
+    <section class="section" style="background-color: var(--clr-surface); border-top: 1px solid var(--clr-border);">
+      <div class="container fade-up" style="max-width: 850px; margin: 0 auto;">
+        <div style="background-color: var(--clr-bg); border: 1px solid var(--clr-border); border-radius: var(--radius-main); padding: var(--space-8);">
+          <span class="eyebrow">Client Checklist</span>
+          <h2 style="font-size: 1.75rem; margin-bottom: var(--space-4);">Is Your Property Ready for Living Architecture?</h2>
+          <p style="margin-bottom: var(--space-6);">Before scheduling a full structural audit, check if your site meets these standard indicators:</p>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6);">
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <i class="ph-fill ph-check-circle" style="color: var(--clr-secondary); font-size: 1.25rem; margin-top: 0.2rem;"></i>
+              <div>
+                <strong>Structural Blueprint or Construction Age:</strong>
+                <span style="color: var(--clr-text-muted);"> Building plans or structural records available to verify deck joist spacing.</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <i class="ph-fill ph-check-circle" style="color: var(--clr-secondary); font-size: 1.25rem; margin-top: 0.2rem;"></i>
+              <div>
+                <strong>Direct Sunlight Exposure:</strong>
+                <span style="color: var(--clr-text-muted);"> Minimum of 3 to 4 hours of natural indirect or direct light (or dedicated grow-light ceiling junction).</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <i class="ph-fill ph-check-circle" style="color: var(--clr-secondary); font-size: 1.25rem; margin-top: 0.2rem;"></i>
+              <div>
+                <strong>Water Supply Line:</strong>
+                <span style="color: var(--clr-text-muted);"> A dedicated cold water bib or mechanical room riser within 50 feet of the installation boundary.</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <i class="ph-fill ph-check-circle" style="color: var(--clr-secondary); font-size: 1.25rem; margin-top: 0.2rem;"></i>
+              <div>
+                <strong>Electrical Outlet:</strong>
+                <span style="color: var(--clr-text-muted);"> Standard 110V/220V GFCI circuit for the IoT smart controller and solenoid manifold.</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: var(--space-4); align-items: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary">Schedule a Site Audit</a>
+            <span style="font-size: 0.9rem; color: var(--clr-text-muted);">Unsure about your specs? Our engineers can conduct a virtual review.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Section 1: Partner Marquee -->
+    <section class="section" style="padding-block: var(--space-8); border-top: 1px solid var(--clr-border);">
+      <div class="container fade-up" style="text-align: center; margin-bottom: var(--space-6);">
+        <p class="label-text" style="color: var(--clr-text-muted);">Trusted by Eco-Pioneers Worldwide</p>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee">
+          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
+          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
+          <i class="ph ph-drop"></i><span>AquaSmart</span>
+          <i class="ph ph-sun"></i><span>Solaris</span>
+          <i class="ph ph-leaf"></i><span>Natura</span>
+          <!-- Duplicate for infinite scroll -->
+          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
+          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
+          <i class="ph ph-drop"></i><span>AquaSmart</span>
+          <i class="ph ph-sun"></i><span>Solaris</span>
+          <i class="ph ph-leaf"></i><span>Natura</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 1.5rem; display: inline-flex;">
+            <i class="ph-fill ph-leaf"></i> GreenScape
+          </a>
+          <p>Pioneering sustainable urban environments through bespoke green roofs and living walls.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="blog.html" class="footer-link">Journal</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html" class="footer-link">Green Roofs</a>
+          <a href="services.html" class="footer-link">Living Walls</a>
+          <a href="services.html" class="footer-link">Irrigation</a>
+          <a href="services.html" class="footer-link">Maintenance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#" class="footer-link"><i class="ph ph-instagram-logo"></i> Instagram</a>
+          <a href="#" class="footer-link"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
+          <a href="#" class="footer-link"><i class="ph ph-twitter-logo"></i> Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GreenScape Living. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 | GreenScape Living</title>
+  <meta name="description" content="Discover our unique approach to green architecture.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    /* Unique Home 2 Styles */
+    .hero-split {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+    
+    .hero-split-content {
+      padding: var(--space-12);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: var(--clr-surface);
+    }
+    
+    .hero-split-image {
+      background-image: url('https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=1920&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+    .interactive-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    
+    .accordion-item {
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-main);
+      overflow: hidden;
+      background-color: var(--clr-surface);
+      transition: var(--transition-smooth);
+    }
+    
+    .accordion-header {
+      padding: var(--space-6);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: var(--weight-h4);
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      background-color: var(--clr-surface);
+      color: var(--clr-text-main);
+    }
+    
+    .accordion-header:hover {
+      background-color: rgba(86, 126, 83, 0.05);
+    }
+    
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background-color: var(--clr-bg);
+      padding-inline: var(--space-6);
+    }
+    
+    .accordion-item.active .accordion-content {
+      max-height: 200px;
+      padding-block: var(--space-4) var(--space-6);
+    }
+    
+    .accordion-item.active .accordion-header {
+      color: var(--clr-primary);
+    }
+    [data-theme="dark"] .accordion-item.active .accordion-header {
+      color: var(--clr-accent);
+    }
+    
+    .accordion-icon {
+      transition: transform 0.3s;
+    }
+    
+    .accordion-item.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+    
+    @media (max-width: 1024px) {
+      .hero-split {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh 50vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Mobile Hamburger Drawer -->
+  <nav class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <a href="index.html" class="nav-logo">
+        <i class="ph-fill ph-leaf"></i> GreenScape
+      </a>
+      <button class="btn-icon btn-toggle-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <div class="drawer-links">
+      <a href="index.html" class="drawer-link nav-link">Home</a>
+      <a href="home2.html" class="drawer-link nav-link active">Home 2</a>
+      <a href="services.html" class="drawer-link nav-link">Services</a>
+      <a href="about.html" class="drawer-link nav-link">About Us</a>
+      <a href="blog.html" class="drawer-link nav-link">Blog</a>
+      <a href="contact.html" class="drawer-link nav-link">Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i> Theme Toggle
+      </button>
+      <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i> RTL Support
+      </button>
+      <a href="login.html" class="btn btn-primary" style="margin-top: 1rem;">Login</a>
+    </div>
+  </nav>
+
+  <!-- Desktop Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="ph-fill ph-leaf"></i> GreenScape
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link active">Home 2</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary">Login</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="btn-icon hamburger btn-toggle-drawer" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Split Hero Section -->
+    <section class="hero-split">
+      <div class="hero-split-content">
+        <div class="fade-up" style="max-width: 600px; margin: 0 auto;">
+          <h1 style="margin-bottom: var(--space-4);">Architectural Ecology</h1>
+          <p class="lead-text" style="margin-bottom: var(--space-8);">Transforming conventional spaces into thriving, sustainable ecosystems. We blend design and nature seamlessly.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+            <a href="about.html" class="btn btn-secondary">Discover More</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-split-image">
+      </div>
+    </section>
+
+    <!-- Interactive Services Section (Accordion) -->
+    <section class="section" style="background-color: var(--clr-bg);">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Our Solutions</h2>
+          <p>Interactive overview of our core environmental offerings.</p>
+        </div>
+        
+        <div class="interactive-accordion fade-up" style="max-width: 800px; margin: 0 auto;">
+          
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span><i class="ph ph-house-line" style="margin-right:0.5rem;"></i> Green Roof Integration</span>
+              <i class="ph ph-caret-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p>We build extensive and intensive green roofs tailored to your building's structural load. This promotes biodiversity, minimizes stormwater runoff, and drastically improves insulation.</p>
+              <a href="services.html" class="nav-link">View details</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span><i class="ph ph-plant" style="margin-right:0.5rem;"></i> Vertical Living Walls</span>
+              <i class="ph ph-caret-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Turn blank facades into lush, air-purifying natural art. Our custom vertical gardening systems bring nature to indoor and outdoor environments.</p>
+              <a href="services.html" class="nav-link">View details</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span><i class="ph ph-drop" style="margin-right:0.5rem;"></i> Smart Irrigation Management</span>
+              <i class="ph ph-caret-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p>Utilize IoT-enabled irrigation techniques that optimize water usage by reading real-time weather and soil moisture data, saving money and the environment.</p>
+              <a href="services.html" class="nav-link">View details</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Highlights / Features Bento Grid -->
+    <section class="section">
+      <div class="container">
+        
+        <style>
+          .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, minmax(250px, auto));
+            gap: var(--space-6);
+          }
+          .bento-item {
+            border-radius: var(--radius-main);
+            padding: var(--space-8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+          }
+          .bento-item-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            background-color: var(--clr-surface);
+            border: 1px solid var(--clr-border);
+            justify-content: flex-start;
+          }
+          .bento-item-2 {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            background-image: url('https://images.unsplash.com/photo-1541893322194-e81fa2db7ca9?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            padding: 0;
+            min-height: 300px;
+          }
+          .bento-item-3 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            background-color: var(--clr-primary);
+            color: #fff;
+          }
+          .bento-item-4 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            background-color: var(--clr-accent);
+            color: #fff;
+          }
+
+          .bento-item h3 { margin-bottom: var(--space-4); }
+          
+          .bento-item-1 h3 { font-size: 2.5rem; line-height: 1.1; margin-top: var(--space-8); }
+          .bento-item-1 p { font-size: 1.125rem; color: var(--clr-text-muted); }
+          .bento-icon { font-size: 3rem; color: var(--clr-accent); }
+
+          @media (max-width: 900px) {
+            .bento-grid {
+              grid-template-columns: 1fr;
+              grid-template-rows: auto;
+            }
+            .bento-item-1, .bento-item-2, .bento-item-3, .bento-item-4 {
+              grid-column: 1 / -1;
+              grid-row: auto;
+            }
+            .bento-item-2 { min-height: 250px; }
+          }
+        </style>
+
+        <div class="bento-grid">
+          
+          <div class="bento-item bento-item-1 fade-up">
+            <i class="ph ph-bezier-curve bento-icon"></i>
+            <h3>Innovative Design</h3>
+            <p>Every living wall and green roof is tailored to complement its architectural surroundings, ensuring a symbiotic aesthetic that elevates the entire property.</p>
+          </div>
+          
+          <div class="bento-item bento-item-2 fade-up">
+            <!-- Empty image container -->
+          </div>
+          
+          <div class="bento-item bento-item-3 fade-up">
+            <h3 style="color:#fff;">Eco-conscious</h3>
+            <p style="color: rgba(255,255,255,0.8); margin: 0;">Our materials and plant choices are locally sourced and environmentally responsible, reducing the carbon footprint of your project.</p>
+          </div>
+          
+          <div class="bento-item bento-item-4 fade-up">
+            <h3 style="color:#fff;">Low Maintenance</h3>
+            <p style="color: rgba(255,255,255,0.9); margin: 0;">Integrated smart systems and resilient flora mean your green space thrives with minimal intervention on your part.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Botanical Species & Ecosystem Explorer Section -->
+    <section class="section" id="flora-explorer" style="background-color: var(--clr-surface);">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 680px; margin: 0 auto var(--space-8);">
+          <span class="eyebrow">Botanical Intelligence</span>
+          <h2>Explore Our Resilient Flora Library</h2>
+          <p>Carefully bred, nursery-acclimatized species selected for maximum urban hardiness, minimal irrigation, and high air-purifying capacity.</p>
+        </div>
+
+        <div class="species-tab-nav fade-up">
+          <button class="species-tab-btn active" data-species-tab="all">All Species</button>
+          <button class="species-tab-btn" data-species-tab="sedum">Sedums & Succulents</button>
+          <button class="species-tab-btn" data-species-tab="fern">Vertical Ferns & Vines</button>
+          <button class="species-tab-btn" data-species-tab="pollinator">Flowering Pollinators</button>
+        </div>
+
+        <div class="species-grid">
+          <div class="species-card fade-up" data-species-type="sedum">
+            <img src="https://images.unsplash.com/photo-1466692476877-361a6b0c268a?q=80&w=600&auto=format&fit=crop" alt="Sedum Kamtschaticum" class="species-img" loading="lazy">
+            <div class="species-body">
+              <span class="badge badge-accent">Sedum Genus</span>
+              <h3 style="font-size: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">Russian Stonecrop</h3>
+              <p style="font-size: 0.85rem; font-style: italic; color: var(--clr-text-muted);">Sedum Kamtschaticum</p>
+              <p style="font-size: 0.9rem;">Thrives in shallow 2-inch soils. Extreme freeze and drought tolerance with golden summer blooms.</p>
+              <div class="species-meta-row">
+                <span><i class="ph ph-sun"></i> Full Sun</span>
+                <span><i class="ph ph-drop"></i> Very Low Water</span>
+                <span><i class="ph ph-shield"></i> -30°F Hardy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="species-card fade-up" data-species-type="sedum">
+            <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?q=80&w=600&auto=format&fit=crop" alt="Sempervivum Tectorum" class="species-img" loading="lazy">
+            <div class="species-body">
+              <span class="badge badge-accent">Sedum Genus</span>
+              <h3 style="font-size: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">Common Houseleek</h3>
+              <p style="font-size: 0.85rem; font-style: italic; color: var(--clr-text-muted);">Sempervivum Tectorum</p>
+              <p style="font-size: 0.9rem;">Compact rosette geometry that stores atmospheric humidity. Naturally repels urban micro-pests.</p>
+              <div class="species-meta-row">
+                <span><i class="ph ph-sun"></i> Direct Sun</span>
+                <span><i class="ph ph-drop"></i> Ultra Low Water</span>
+                <span><i class="ph ph-shield"></i> -25°F Hardy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="species-card fade-up" data-species-type="fern">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=600&auto=format&fit=crop" alt="Nephrolepis Exaltata" class="species-img" loading="lazy">
+            <div class="species-body">
+              <span class="badge badge-primary">Living Wall</span>
+              <h3 style="font-size: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">Sword Fern</h3>
+              <p style="font-size: 0.85rem; font-style: italic; color: var(--clr-text-muted);">Nephrolepis Exaltata</p>
+              <p style="font-size: 0.9rem;">High-surface-area fronds that scrub VOCs and airborne dust. Ideal for indoor vertical living facades.</p>
+              <div class="species-meta-row">
+                <span><i class="ph ph-cloud-sun"></i> Partial Shade</span>
+                <span><i class="ph ph-drop"></i> Automated Drip</span>
+                <span><i class="ph ph-wind"></i> Air Purifier</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="species-card fade-up" data-species-type="pollinator">
+            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=600&auto=format&fit=crop" alt="Allium Schoenoprasum" class="species-img" loading="lazy">
+            <div class="species-body">
+              <span class="badge badge-accent">Pollinator</span>
+              <h3 style="font-size: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">Wild Meadow Chives</h3>
+              <p style="font-size: 0.85rem; font-style: italic; color: var(--clr-text-muted);">Allium Schoenoprasum</p>
+              <p style="font-size: 0.9rem;">Vibrant purple blossom pom-poms that attract native honeybees and swallowtail butterflies onto urban roofs.</p>
+              <div class="species-meta-row">
+                <span><i class="ph ph-sun"></i> Full Sun</span>
+                <span><i class="ph ph-drop"></i> Moderate Water</span>
+                <span><i class="ph ph-flower"></i> Pollinator Safe</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Multi-Layer Architectural Engineering Anatomy Section -->
+    <section class="section" id="anatomy">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 680px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Structural Precision</span>
+          <h2>The 6-Layer Engineered Strata</h2>
+          <p>Each GreenScape roof installation is a multi-barrier living system designed to safeguard your building for over 50 years.</p>
+        </div>
+
+        <div class="anatomy-stack fade-up">
+          <div class="anatomy-layer">
+            <div class="layer-num-badge">06</div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Mature Pre-Cultivated Vegetation Mat</h4>
+              <p style="margin: 0; font-size: 0.95rem;">95% pre-rooted sedum and succulent blends that deliver immediate aesthetic coverage and microclimate cooling.</p>
+            </div>
+          </div>
+
+          <div class="anatomy-layer">
+            <div class="layer-num-badge">05</div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Engineered Lightweight Substrate Matrix</h4>
+              <p style="margin: 0; font-size: 0.95rem;">Expanded volcanic shale, porous pumice, and organic compost engineered to not degrade or compact over decades.</p>
+            </div>
+          </div>
+
+          <div class="anatomy-layer">
+            <div class="layer-num-badge">04</div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Permeable Geotextile Filter Fabric</h4>
+              <p style="margin: 0; font-size: 0.95rem;">Allows surplus moisture to freely permeate downward while preventing fine substrate particles from washing into drainage cells.</p>
+            </div>
+          </div>
+
+          <div class="anatomy-layer">
+            <div class="layer-num-badge">03</div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Honeycomb Drainage & Water Storage Trays</h4>
+              <p style="margin: 0; font-size: 0.95rem;">100% recycled HDPE cups that retain vital moisture for dry spells while channeling excessive storm surges straight to roof scuppers.</p>
+            </div>
+          </div>
+
+          <div class="anatomy-layer">
+            <div class="layer-num-badge">02</div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Heavy-Duty Puncture Protection Fleece</h4>
+              <p style="margin: 0; font-size: 0.95rem;">Non-woven needle-punched synthetic cushion that absorbs structural deck shifting and guards against mechanical impacts.</p>
+            </div>
+          </div>
+
+          <div class="anatomy-layer">
+            <div class="layer-num-badge">01</div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Anti-Root Penetration & Waterproofing Membrane</h4>
+              <p style="margin: 0; font-size: 0.95rem;">Commercial-grade elastomeric membrane infused with non-toxic root deterrents, guaranteed waterproof for 30+ years.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financial ROI & Lifecycle Cost Comparison Section -->
+    <section class="section" style="background-color: var(--clr-surface);" id="roi-analysis">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Economic Value</span>
+          <h2>Conventional Roof vs. GreenScape Living Roof</h2>
+          <p>While traditional roofs degrade quickly and trap heat, a living roof doubles membrane lifespan and generates continuous cash savings.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); max-width: 1000px; margin: 0 auto;">
+          <div class="pricing-card fade-up">
+            <span class="badge" style="background-color: rgba(217, 83, 79, 0.15); color: var(--clr-error); align-self: flex-start;">Traditional Blacktop / Bitumen</span>
+            <div class="pricing-price" style="font-size: 2rem; color: var(--clr-text-main); margin-top: 1rem;">15 - 20 Yrs</div>
+            <span class="pricing-period">Standard Membrane Lifespan</span>
+            <ul class="pricing-features">
+              <li><i class="ph ph-x-circle" style="color: var(--clr-error);"></i> Reaches surface temperatures up to 160°F (71°C)</li>
+              <li><i class="ph ph-x-circle" style="color: var(--clr-error);"></i> Zero stormwater absorption; full sewer fees</li>
+              <li><i class="ph ph-x-circle" style="color: var(--clr-error);"></i> High summer HVAC AC utility expenditure</li>
+              <li><i class="ph ph-x-circle" style="color: var(--clr-error);"></i> Constant UV cracking and thermal shock wear</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card featured fade-up">
+            <div class="pricing-badge-popular">Sustainable Advantage</div>
+            <span class="badge badge-primary" style="align-self: flex-start;">GreenScape Engineered Living Roof</span>
+            <div class="pricing-price" style="font-size: 2rem; margin-top: 1rem;">50+ Yrs</div>
+            <span class="pricing-period">Protected Membrane Lifespan</span>
+            <ul class="pricing-features">
+              <li><i class="ph-fill ph-check-circle"></i> Remains cool at 80°F-85°F even during peak summer</li>
+              <li><i class="ph-fill ph-check-circle"></i> Absorbs up to 80% of annual rainfall on-site</li>
+              <li><i class="ph-fill ph-check-circle"></i> Lowers building HVAC cooling bills by 25% - 40%</li>
+              <li><i class="ph-fill ph-check-circle"></i> Adds 8% - 12% valuation premium to commercial assets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulated IoT Smart Telemetry Dashboard Preview Section -->
+    <section class="section" id="iot-telemetry">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 680px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Continuous Telemetry</span>
+          <h2>Cloud-Connected Living Architecture</h2>
+          <p>Monitor moisture saturation, weather forecast integration, and solenoid valve flow rates in real-time from our mobile client portal.</p>
+        </div>
+
+        <div style="background-color: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-main); padding: var(--space-8); box-shadow: var(--shadow-main); max-width: 950px; margin: 0 auto;" class="fade-up">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--clr-border); padding-bottom: var(--space-4); margin-bottom: var(--space-6); flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background-color: var(--clr-success);"></span>
+              <h4 style="margin: 0; font-size: 1.15rem;">Telemetry Hub: Atrium Living Wall #4 (Live Status)</h4>
+            </div>
+            <span class="badge badge-primary"><i class="ph ph-broadcast"></i> Connected to Cloud</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-6);">
+            <div style="background-color: var(--clr-bg); padding: var(--space-4); border-radius: var(--radius-main); border: 1px solid var(--clr-border);">
+              <span style="font-size: 0.8rem; color: var(--clr-text-muted); text-transform: uppercase; font-weight: 700;">Substrate Moisture</span>
+              <div style="font-size: 1.75rem; font-weight: 700; color: var(--clr-primary); margin-top: 0.25rem;">42% <span style="font-size: 0.85rem; color: var(--clr-success); font-weight: 600;">Optimal</span></div>
+            </div>
+            <div style="background-color: var(--clr-bg); padding: var(--space-4); border-radius: var(--radius-main); border: 1px solid var(--clr-border);">
+              <span style="font-size: 0.8rem; color: var(--clr-text-muted); text-transform: uppercase; font-weight: 700;">Ambient Temp</span>
+              <div style="font-size: 1.75rem; font-weight: 700; color: var(--clr-primary); margin-top: 0.25rem;">72.4°F <span style="font-size: 0.85rem; color: var(--clr-text-muted); font-weight: 400;">(22.4°C)</span></div>
+            </div>
+            <div style="background-color: var(--clr-bg); padding: var(--space-4); border-radius: var(--radius-main); border: 1px solid var(--clr-border);">
+              <span style="font-size: 0.8rem; color: var(--clr-text-muted); text-transform: uppercase; font-weight: 700;">Rain Prediction</span>
+              <div style="font-size: 1.75rem; font-weight: 700; color: var(--clr-primary); margin-top: 0.25rem;">85% <span style="font-size: 0.85rem; color: var(--clr-secondary); font-weight: 600;">Conserving</span></div>
+            </div>
+            <div style="background-color: var(--clr-bg); padding: var(--space-4); border-radius: var(--radius-main); border: 1px solid var(--clr-border);">
+              <span style="font-size: 0.8rem; color: var(--clr-text-muted); text-transform: uppercase; font-weight: 700;">Next Fertigation</span>
+              <div style="font-size: 1.75rem; font-weight: 700; color: var(--clr-primary); margin-top: 0.25rem;">04:30 AM <span style="font-size: 0.85rem; color: var(--clr-text-muted); font-weight: 400;">Automated</span></div>
+            </div>
+          </div>
+
+          <div style="background: rgba(86, 126, 83, 0.1); border: 1px solid var(--clr-secondary); border-radius: var(--radius-main); padding: var(--space-4); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <i class="ph ph-shield-check" style="font-size: 1.5rem; color: var(--clr-secondary);"></i>
+              <span style="font-size: 0.95rem; font-weight: 500;">Zero leaks detected across 24 monitored zone circuits over the last 90 days.</span>
+            </div>
+            <a href="services.html" class="btn btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">View IoT Specs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Section 1: Partner Marquee -->
+    <section class="section" style="padding-block: var(--space-8); border-top: 1px solid var(--clr-border);">
+      <div class="container fade-up" style="text-align: center; margin-bottom: var(--space-6);">
+        <p class="label-text" style="color: var(--clr-text-muted);">Trusted by Eco-Pioneers Worldwide</p>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee">
+          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
+          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
+          <i class="ph ph-drop"></i><span>AquaSmart</span>
+          <i class="ph ph-sun"></i><span>Solaris</span>
+          <i class="ph ph-leaf"></i><span>Natura</span>
+          <!-- Duplicate for infinite scroll -->
+          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
+          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
+          <i class="ph ph-drop"></i><span>AquaSmart</span>
+          <i class="ph ph-sun"></i><span>Solaris</span>
+          <i class="ph ph-leaf"></i><span>Natura</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="color: #fff; margin-bottom: 1.5rem; display: inline-flex;">
+            <i class="ph-fill ph-leaf"></i> GreenScape
+          </a>
+          <p>Pioneering sustainable urban environments through bespoke green roofs and living walls.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="blog.html" class="footer-link">Journal</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html" class="footer-link">Green Roofs</a>
+          <a href="services.html" class="footer-link">Living Walls</a>
+          <a href="services.html" class="footer-link">Irrigation</a>
+          <a href="services.html" class="footer-link">Maintenance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#" class="footer-link"><i class="ph ph-instagram-logo"></i> Instagram</a>
+          <a href="#" class="footer-link"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
+          <a href="#" class="footer-link"><i class="ph ph-twitter-logo"></i> Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GreenScape Living. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Accordion Logic for Home 2
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordionItems = document.querySelectorAll('.accordion-item');
+      
+      accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        header.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          
+          // Close all
+          accordionItems.forEach(i => i.classList.remove('active'));
+          
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
