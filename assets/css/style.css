@@ -446,6 +446,12 @@ ul {
   gap: var(--space-8);
 }
 
+.card-grid-triad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
 .card {
   background-color: var(--clr-surface);
   border-radius: var(--radius-main);
@@ -702,6 +708,85 @@ ul {
   
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Responsive 3-Card Layout & Tablet Centering (641px - 1024px)
+   Ensures 3-column on desktop (>1024px), clean 2-column on tablet with the
+   3rd card centered across both columns, and 1-column full-width on mobile (<=640px).
+   ========================================================================== */
+@media (min-width: 1025px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card-grid-triad {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .guarantees-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .card-grid,
+  .card-grid-triad,
+  .project-grid,
+  .team-grid,
+  .pricing-grid,
+  .guarantees-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .card-grid > :nth-child(3):last-child,
+  .project-grid > :nth-child(3):last-child,
+  .team-grid > :nth-child(3):last-child,
+  .pricing-grid > :nth-child(3):last-child {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    width: 100% !important;
+    max-width: calc(50% - (var(--space-8) / 2)) !important;
+    margin-inline: auto !important;
+  }
+
+  .guarantees-grid > :nth-child(3):last-child,
+  .card-grid-triad > :nth-child(3):last-child {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    width: 100% !important;
+    max-width: calc(50% - (var(--space-6) / 2)) !important;
+    margin-inline: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-grid,
+  .card-grid-triad,
+  .project-grid,
+  .team-grid,
+  .pricing-grid,
+  .guarantees-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card-grid > :nth-child(3):last-child,
+  .card-grid-triad > :nth-child(3):last-child,
+  .project-grid > :nth-child(3):last-child,
+  .team-grid > :nth-child(3):last-child,
+  .pricing-grid > :nth-child(3):last-child,
+  .guarantees-grid > :nth-child(3):last-child {
+    grid-column: auto !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
   }
 }
 
