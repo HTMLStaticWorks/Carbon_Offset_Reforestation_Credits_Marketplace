@@ -46,3 +46,4 @@ html[dir="rtl"] .auth-divider::after {
 html[dir="rtl"] .footer-link:hover {
   transform: translateX(-4px);
 }
+

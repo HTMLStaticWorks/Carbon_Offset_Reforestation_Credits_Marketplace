@@ -1890,6 +1890,24 @@ ul {
   padding: var(--space-8);
   background-color: var(--clr-bg);
 }
+
+/* Floating Controls Outside the Box (Top Right Corner) */
+.auth-page-actions {
+  position: fixed;
+  top: var(--space-6);
+  right: var(--space-6);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 100;
+}
+
+@media (max-width: 576px) {
+  .auth-page-actions {
+    top: var(--space-4);
+    right: var(--space-4);
+  }
+}
+
 @media (max-width: 900px) {
   .auth-split-wrapper {
     grid-template-columns: 1fr;
