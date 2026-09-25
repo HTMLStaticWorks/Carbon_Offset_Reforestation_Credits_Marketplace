@@ -48,16 +48,13 @@
         }
         @media (max-width: 576px) {
           .auth-header {
-            flex-direction: column;
-            gap: var(--space-4);
-          }
-          .auth-header-left {
-            flex-direction: column;
-            gap: var(--space-2);
+            flex-wrap: wrap;
+            padding: var(--space-4);
           }
           .auth-back-link {
             border-left: none;
             padding-left: 0;
+            font-size: 0.75rem;
           }
         }
       </style>
@@ -99,7 +96,10 @@
           
           <div class="form-group">
             <label class="form-label" for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" required placeholder="••••••••">
+            <div style="position: relative;">
+              <input type="password" class="form-control" id="password" name="password" required placeholder="••••••••" style="padding-right: 2.5rem;">
+              <i class="ph ph-eye password-toggle" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--clr-text-muted);"></i>
+            </div>
           </div>
 
           <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-top: -0.25rem;">
@@ -141,6 +141,25 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleIcons = document.querySelectorAll('.password-toggle');
+      toggleIcons.forEach(icon => {
+        icon.addEventListener('click', () => {
+          const input = icon.previousElementSibling;
+          if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('ph-eye');
+            icon.classList.add('ph-eye-slash');
+          } else {
+            input.type = 'password';
+            icon.classList.remove('ph-eye-slash');
+            icon.classList.add('ph-eye');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
 
