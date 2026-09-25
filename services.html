@@ -348,14 +348,8 @@
 
     <!-- Smart Irrigation & Closed-Loop Hydroponic Spotlight Section -->
     <section class="section" style="background-color: var(--clr-surface); padding-block: var(--space-16);">
-      <style>
-        @media (max-width: 768px) {
-          .irrigation-grid-mobile-reverse > div:nth-child(1) { order: 2; }
-          .irrigation-grid-mobile-reverse > div:nth-child(2) { order: 1; margin-bottom: var(--space-4); }
-        }
-      </style>
       <div class="container">
-        <div class="irrigation-grid-mobile-reverse" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-12); align-items: center;">
+        <div class="mobile-reverse" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-12); align-items: center;">
           <div class="fade-up">
             <span class="eyebrow">Next-Gen Hydroponics</span>
             <h2>Closed-Loop Sensor Driven Precision Irrigation</h2>
@@ -516,7 +510,6 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 GreenScape Living. All rights reserved.</p>
-        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="btn btn-primary" style="padding: 0.5rem 1rem;">Back to Top <i class="ph ph-arrow-up" style="margin-left: 0.25rem;"></i></button>
       </div>
     </div>
   </footer>

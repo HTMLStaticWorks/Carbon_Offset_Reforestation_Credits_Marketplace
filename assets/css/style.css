@@ -358,8 +358,8 @@ ul {
 }
 
 .drawer-actions {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-4);
   margin-top: var(--space-8);
   border-top: 1px solid var(--clr-border);
@@ -368,10 +368,18 @@ ul {
 
 .drawer-actions .btn-icon {
   width: 100%;
-  justify-content: flex-start;
-  gap: var(--space-4);
+  justify-content: center;
   border-radius: var(--radius-main);
-  padding-inline: var(--space-4);
+  padding-inline: 0;
+  font-size: 0;
+}
+.drawer-actions .btn-icon i {
+  font-size: 1.25rem;
+}
+
+.drawer-actions > .btn {
+  grid-column: 1 / -1;
+  margin-top: var(--space-2) !important;
 }
 
 .drawer-overlay {
@@ -1910,3 +1918,69 @@ ul {
   }
 }
 
+/* --- Global Fix: Tablet (1024px) Alignment Overrides --- */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .phases-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* --- Global Fix: Mobile Image Order Overrides --- */
+@media (max-width: 768px) {
+  .mobile-reverse {
+    display: flex !important;
+    flex-direction: column-reverse;
+  }
+}
+
+/* --- Global Fix: Mobile Contact Social Alignment --- */
+@media (max-width: 768px) {
+  .social-section {
+    text-align: center;
+  }
+  .social-links {
+    justify-content: center !important;
+  }
+}
+
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-normal);
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background-color: var(--clr-secondary);
+  transform: translateY(-5px);
+}
+
+[data-theme="dark"] #back-to-top {
+  background-color: var(--clr-secondary);
+}
+[data-theme="dark"] #back-to-top:hover {
+  background-color: var(--clr-primary);
+}

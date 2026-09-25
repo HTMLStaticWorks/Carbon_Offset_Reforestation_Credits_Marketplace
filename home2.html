@@ -98,7 +98,47 @@
     @media (max-width: 1024px) {
       .hero-split {
         grid-template-columns: 1fr;
-        grid-template-rows: 50vh 50vh;
+        grid-template-rows: auto auto;
+        min-height: auto;
+        padding-top: 80px;
+      }
+      .hero-split-content {
+        padding: var(--space-12) var(--space-6);
+        justify-content: flex-start;
+      }
+      .hero-split-image {
+        min-height: 420px;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-split {
+        padding-top: 80px;
+      }
+      .hero-split-content {
+        padding: var(--space-8) var(--space-6) var(--space-8);
+      }
+      .hero-split-content h1 {
+        font-size: clamp(2rem, 7vw, 2.75rem);
+        margin-top: var(--space-2);
+        margin-bottom: var(--space-4);
+      }
+      .hero-split-content .lead-text {
+        font-size: 1.05rem;
+        margin-bottom: var(--space-6) !important;
+      }
+      .hero-split .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-split .hero-actions .btn {
+        width: 100%;
+        max-width: 220px;
+        text-align: center;
+      }
+      .hero-split-image {
+        min-height: 350px;
       }
     }
   </style>
@@ -274,7 +314,7 @@
 
         <div class="species-grid">
           <div class="species-card fade-up" data-species-type="sedum">
-            <img src="https://images.unsplash.com/photo-1466692476877-361a6b0c268a?q=80&w=600&auto=format&fit=crop" alt="Sedum Kamtschaticum" class="species-img" loading="lazy">
+            <img src="https://i.pinimg.com/1200x/9f/c7/f5/9fc7f51f2333b247e01a298852e03b27.jpg" alt="Sedum Kamtschaticum" class="species-img" loading="lazy">
             <div class="species-body">
               <span class="badge badge-accent">Sedum Genus</span>
               <h3 style="font-size: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">Russian Stonecrop</h3>
@@ -483,27 +523,6 @@
       </div>
     </section>
 
-    <!-- Global Section 1: Partner Marquee -->
-    <section class="section" style="padding-block: var(--space-8); border-top: 1px solid var(--clr-border);">
-      <div class="container fade-up" style="text-align: center; margin-bottom: var(--space-6);">
-        <p class="label-text" style="color: var(--clr-text-muted);">Trusted by Eco-Pioneers Worldwide</p>
-      </div>
-      <div class="marquee-wrapper">
-        <div class="marquee">
-          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
-          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
-          <i class="ph ph-drop"></i><span>AquaSmart</span>
-          <i class="ph ph-sun"></i><span>Solaris</span>
-          <i class="ph ph-leaf"></i><span>Natura</span>
-          <!-- Duplicate for infinite scroll -->
-          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
-          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
-          <i class="ph ph-drop"></i><span>AquaSmart</span>
-          <i class="ph ph-sun"></i><span>Solaris</span>
-          <i class="ph ph-leaf"></i><span>Natura</span>
-        </div>
-      </div>
-    </section>
     <!-- Interactive Services Section (Accordion) -->
     <section class="section" style="background-color: var(--clr-bg);">
       <div class="container">
@@ -551,6 +570,28 @@
       </div>
     </section>
 
+    <!-- Global Section 1: Partner Marquee -->
+    <section class="section" style="padding-block: var(--space-8); border-top: 1px solid var(--clr-border);">
+      <div class="container fade-up" style="text-align: center; margin-bottom: var(--space-6);">
+        <p class="label-text" style="color: var(--clr-text-muted);">Trusted by Eco-Pioneers Worldwide</p>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee">
+          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
+          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
+          <i class="ph ph-drop"></i><span>AquaSmart</span>
+          <i class="ph ph-sun"></i><span>Solaris</span>
+          <i class="ph ph-leaf"></i><span>Natura</span>
+          <!-- Duplicate for infinite scroll -->
+          <i class="ph ph-buildings"></i><span>UrbanCorp</span>
+          <i class="ph ph-tree-evergreen"></i><span>EcoBuild</span>
+          <i class="ph ph-drop"></i><span>AquaSmart</span>
+          <i class="ph ph-sun"></i><span>Solaris</span>
+          <i class="ph ph-leaf"></i><span>Natura</span>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -585,7 +626,6 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 GreenScape Living. All rights reserved.</p>
-        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="btn btn-primary" style="padding: 0.5rem 1rem;">Back to Top <i class="ph ph-arrow-up" style="margin-left: 0.25rem;"></i></button>
       </div>
     </div>
   </footer>

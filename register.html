@@ -20,24 +20,67 @@
 
     <!-- Right Panel: Registration Form Section -->
     <div class="auth-form-panel" style="position: relative;">
-      <!-- Brand & Back Link (Top Left) -->
-      <div style="position: absolute; top: var(--space-6); left: var(--space-6); display: flex; align-items: center; gap: var(--space-4); z-index: 10;">
-        <a href="index.html" class="nav-logo" style="font-size: 1.25rem; display: inline-flex; align-items: center; font-weight: 700; color: var(--clr-text-main); text-decoration: none;">
-          <i class="ph-fill ph-leaf" style="color: var(--clr-primary); margin-right: 0.25rem;"></i> GreenScape
-        </a>
-        <a href="index.html" style="font-size: 0.85rem; color: var(--clr-text-muted); display: inline-flex; align-items: center; gap: 0.25rem; border-left: 1px solid var(--clr-border); padding-left: var(--space-4); text-decoration: none;">
-          <i class="ph ph-arrow-left"></i> Back to website
-        </a>
-      </div>
+      <style>
+        .auth-header {
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          padding: var(--space-6);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 10;
+        }
+        .auth-header-left {
+          display: flex;
+          align-items: center;
+          gap: var(--space-4);
+        }
+        .auth-back-link {
+          font-size: 0.85rem;
+          color: var(--clr-text-muted);
+          display: inline-flex;
+          align-items: center;
+          gap: 0.25rem;
+          border-left: 1px solid var(--clr-border);
+          padding-left: var(--space-4);
+          text-decoration: none;
+          white-space: nowrap;
+        }
+        @media (max-width: 576px) {
+          .auth-header {
+            flex-direction: column;
+            gap: var(--space-4);
+          }
+          .auth-header-left {
+            flex-direction: column;
+            gap: var(--space-2);
+          }
+          .auth-back-link {
+            border-left: none;
+            padding-left: 0;
+          }
+        }
+      </style>
+      
+      <!-- Top Header -->
+      <div class="auth-header">
+        <div class="auth-header-left">
+          <a href="index.html" class="nav-logo" style="font-size: 1.25rem; display: inline-flex; align-items: center; font-weight: 700; color: var(--clr-text-main); text-decoration: none;">
+            <i class="ph-fill ph-leaf" style="color: var(--clr-primary); margin-right: 0.25rem;"></i> GreenScape
+          </a>
+          <a href="index.html" class="auth-back-link">
+            <i class="ph ph-arrow-left"></i> Back to website
+          </a>
+        </div>
 
-      <!-- Theme & RTL Toggles (Top Right) -->
-      <div style="position: absolute; top: var(--space-6); right: var(--space-6); display: flex; gap: 0.5rem; z-index: 10;">
-        <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
-          <i class="ph ph-moon"></i>
-        </button>
-        <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
-          <i class="ph ph-arrows-left-right"></i>
-        </button>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn-icon btn-theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="ph ph-moon"></i>
+          </button>
+          <button class="btn-icon btn-rtl-toggle" aria-label="Toggle RTL">
+            <i class="ph ph-arrows-left-right"></i>
+          </button>
+        </div>
       </div>
 
       <div class="auth-card fade-up" style="max-width: 480px; width: 100%;">
@@ -59,16 +102,14 @@
             <input type="email" class="form-control" id="email" name="email" required placeholder="name@company.com">
           </div>
           
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-3);">
-            <div class="form-group">
-              <label class="form-label" for="password">Password</label>
-              <input type="password" class="form-control" id="password" name="password" required placeholder="••••••••">
-            </div>
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required placeholder="••••••••">
+          </div>
 
-            <div class="form-group">
-              <label class="form-label" for="confirmPassword">Confirm Password</label>
-              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required placeholder="••••••••">
-            </div>
+          <div class="form-group">
+            <label class="form-label" for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required placeholder="••••••••">
           </div>
 
           <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 0.25rem;">
