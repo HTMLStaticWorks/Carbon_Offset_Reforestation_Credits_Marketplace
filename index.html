@@ -16,10 +16,24 @@
   <style>
     .about-story-img {
       max-width: 50%;
+      height: auto;
+      object-fit: cover;
     }
     @media (max-width: 768px) {
       .about-story-img {
-        max-width: 80%;
+        max-width: 85%;
+        width: 100%;
+        max-height: 280px !important;
+        height: 280px !important;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    @media (max-width: 480px) {
+      .about-story-img {
+        max-width: 100%;
+        max-height: 220px !important;
+        height: 220px !important;
       }
     }
   </style>
@@ -191,7 +205,7 @@
             <a href="about.html" class="btn btn-secondary" style="margin-top: var(--space-4);">Read Our Story</a>
           </div>
           <div class="fade-up" style="text-align: center;">
-            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop" alt="Green architecture" class="about-story-img" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main); height: auto; margin: 0 auto;">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop" alt="Green architecture" class="about-story-img" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main); margin: 0 auto;">
           </div>
         </div>
       </div>

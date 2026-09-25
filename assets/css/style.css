@@ -1949,6 +1949,22 @@ ul {
     display: flex !important;
     flex-direction: column-reverse;
   }
+  .about-story-img {
+    max-width: 85% !important;
+    width: 100% !important;
+    max-height: 280px !important;
+    height: 280px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-story-img {
+    max-width: 100% !important;
+    max-height: 220px !important;
+    height: 220px !important;
+  }
 }
 
 /* --- Global Fix: Mobile Contact Social Alignment --- */
