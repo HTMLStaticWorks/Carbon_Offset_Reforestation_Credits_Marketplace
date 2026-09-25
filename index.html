@@ -13,6 +13,16 @@
   
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .about-story-img {
+      max-width: 50%;
+    }
+    @media (max-width: 768px) {
+      .about-story-img {
+        max-width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -99,6 +109,40 @@
       </div>
     </section>
 
+    <!-- Live Environmental Impact Counter Section -->
+    <section class="section" style="padding-block: var(--space-16); background-color: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border);">
+      <div class="container">
+        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
+          <span class="eyebrow">Real Ecological Footprint</span>
+          <h2>Measurable Planetary Impact</h2>
+          <p>Every installation delivers quantifiable environmental dividends from day one.</p>
+        </div>
+        
+        <div class="impact-counters-wrap">
+          <div class="impact-counter-card fade-up">
+            <div class="impact-num">240K+</div>
+            <p class="label-text" style="font-weight: 700; margin-bottom: 0.25rem;">Square Feet Greened</p>
+            <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Across 180+ urban buildings</span>
+          </div>
+          <div class="impact-counter-card fade-up">
+            <div class="impact-num">1,850+</div>
+            <p class="label-text" style="font-weight: 700; margin-bottom: 0.25rem;">Tons CO₂ Sequestered</p>
+            <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Annual lifetime reduction</span>
+          </div>
+          <div class="impact-counter-card fade-up">
+            <div class="impact-num">14.8M</div>
+            <p class="label-text" style="font-weight: 700; margin-bottom: 0.25rem;">Gallons Rainwater Saved</p>
+            <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Diverted from city sewers</span>
+          </div>
+          <div class="impact-counter-card fade-up">
+            <div class="impact-num">99.6%</div>
+            <p class="label-text" style="font-weight: 700; margin-bottom: 0.25rem;">Flora Survival Rate</p>
+            <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Guaranteed by IoT irrigation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services Section -->
     <section class="section">
       <div class="container">
@@ -147,7 +191,7 @@
             <a href="about.html" class="btn btn-secondary" style="margin-top: var(--space-4);">Read Our Story</a>
           </div>
           <div class="fade-up" style="text-align: center;">
-            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop" alt="Green architecture" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main); max-width: 80%; height: auto; margin: 0 auto;">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop" alt="Green architecture" class="about-story-img" style="border-radius: var(--radius-main); box-shadow: var(--shadow-main); height: auto; margin: 0 auto;">
           </div>
         </div>
       </div>
@@ -181,94 +225,6 @@
             <i class="ph ph-heartbeat" style="font-size: 3rem; color: var(--clr-secondary); margin-bottom: 1rem;"></i>
             <h4>Biophilic Wellness</h4>
             <p>Enhance mental health and productivity by reconnecting with nature.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section" style="background-color: var(--clr-surface);">
-      <div class="container">
-        <div class="section-header fade-up">
-          <h2>Client Success Stories</h2>
-          <p>Hear from those who have transformed their spaces with GreenScape.</p>
-        </div>
-
-        <div class="card-grid">
-          <div class="card" style="align-items: flex-start; text-align: left;">
-            <div style="color: var(--clr-accent); font-size: 1.5rem; margin-bottom: 1rem;">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-            </div>
-            <p>"The living wall in our corporate lobby completely changed the atmosphere. It's the first thing visitors compliment. The GreenScape team was professional and seamless."</p>
-            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
-              <div>
-                <h4 style="font-size: 1rem; margin-bottom: 0;">Sarah Jenkins</h4>
-                <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Facilities Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="align-items: flex-start; text-align: left;">
-            <div style="color: var(--clr-accent); font-size: 1.5rem; margin-bottom: 1rem;">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-            </div>
-            <p>"Our residential green roof not only lowered our AC bills this summer but gave us a beautiful private oasis in the city. Outstanding architectural integration."</p>
-            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
-              <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=150&auto=format&fit=crop" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
-              <div>
-                <h4 style="font-size: 1rem; margin-bottom: 0;">Mark D.</h4>
-                <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Homeowner</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="align-items: flex-start; text-align: left;">
-            <div style="color: var(--clr-accent); font-size: 1.5rem; margin-bottom: 1rem;">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-            </div>
-            <p>"The smart irrigation system has been a game-changer for our urban rooftop. Water usage dropped by 40% in just two months. Highly recommended!"</p>
-            <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
-              <div>
-                <h4 style="font-size: 1rem; margin-bottom: 0;">David R.</h4>
-                <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Property Developer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Live Environmental Impact Counter Section -->
-    <section class="section" style="padding-block: var(--space-16); background-color: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border);">
-      <div class="container">
-        <div class="section-header fade-up" style="text-align: center; max-width: 650px; margin: 0 auto var(--space-12);">
-          <span class="eyebrow">Real Ecological Footprint</span>
-          <h2>Measurable Planetary Impact</h2>
-          <p>Every installation delivers quantifiable environmental dividends from day one.</p>
-        </div>
-        
-        <div class="impact-counters-wrap">
-          <div class="impact-counter-card fade-up">
-            <div class="impact-num">240K+</div>
-            <p class="label-text" style="font-weight: 700; margin-bottom: 0.25rem;">Square Feet Greened</p>
-            <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Across 180+ urban buildings</span>
-          </div>
-          <div class="impact-counter-card fade-up">
-            <div class="impact-num">1,850+</div>
-            <p class="label-text" style="font-weight: 700; margin-bottom: 0.25rem;">Tons CO₂ Sequestered</p>
-            <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Annual lifetime reduction</span>
-          </div>
-          <div class="impact-counter-card fade-up">
-            <div class="impact-num">14.8M</div>
-            <p class="label-text" style="font-weight: 700; margin-bottom: 0.25rem;">Gallons Rainwater Saved</p>
-            <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Diverted from city sewers</span>
-          </div>
-          <div class="impact-counter-card fade-up">
-            <div class="impact-num">99.6%</div>
-            <p class="label-text" style="font-weight: 700; margin-bottom: 0.25rem;">Flora Survival Rate</p>
-            <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Guaranteed by IoT irrigation</span>
           </div>
         </div>
       </div>
@@ -398,7 +354,7 @@
         <div class="project-grid">
           <div class="project-card fade-up" data-category="commercial">
             <div class="project-card-thumb">
-              <img src="https://images.unsplash.com/photo-1541893322194-e81fa2db7ca9?q=80&w=800&auto=format&fit=crop" alt="Solaris Tower Sky Garden" loading="lazy">
+              <img src="https://i.pinimg.com/1200x/a2/9b/b7/a29bb72df797089f3ab3d84bbd8e2fae.jpg" alt="Solaris Tower Sky Garden" loading="lazy">
               <span class="badge badge-primary" style="position: absolute; top: 1rem; left: 1rem; z-index: 2;">Commercial</span>
             </div>
             <div class="project-card-body">
@@ -467,6 +423,60 @@
                   <div class="project-stat-val">100%</div>
                   <div class="project-stat-label">Hydroponic</div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" style="background-color: var(--clr-surface);">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2>Client Success Stories</h2>
+          <p>Hear from those who have transformed their spaces with GreenScape.</p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card" style="align-items: flex-start; text-align: left;">
+            <div style="color: var(--clr-accent); font-size: 1.5rem; margin-bottom: 1rem;">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p>"The living wall in our corporate lobby completely changed the atmosphere. It's the first thing visitors compliment. The GreenScape team was professional and seamless."</p>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0;">Sarah Jenkins</h4>
+                <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Facilities Manager</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="align-items: flex-start; text-align: left;">
+            <div style="color: var(--clr-accent); font-size: 1.5rem; margin-bottom: 1rem;">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p>"Our residential green roof not only lowered our AC bills this summer but gave us a beautiful private oasis in the city. Outstanding architectural integration."</p>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+              <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=150&auto=format&fit=crop" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0;">Mark D.</h4>
+                <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Homeowner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="align-items: flex-start; text-align: left;">
+            <div style="color: var(--clr-accent); font-size: 1.5rem; margin-bottom: 1rem;">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p>"The smart irrigation system has been a game-changer for our urban rooftop. Water usage dropped by 40% in just two months. Highly recommended!"</p>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Client" style="width: 50px; height: 50px; border-radius: 50%;">
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0;">David R.</h4>
+                <span style="font-size: var(--size-caption); color: var(--clr-text-muted);">Property Developer</span>
               </div>
             </div>
           </div>
