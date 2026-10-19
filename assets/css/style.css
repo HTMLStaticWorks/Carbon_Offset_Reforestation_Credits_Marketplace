@@ -2124,18 +2124,34 @@ ul {
   }
 }
 
-/* --- Home 1: Increase Story Image Width in Desktop and 1024 --- */
+/* --- Home 1: Increase Story Image Width & Height in Desktop and 1024 --- */
+.about-story-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
 @media (min-width: 769px) {
   .about-story-container {
-    grid-template-columns: 1fr 1.25fr !important;
+    grid-template-columns: 1fr 1.35fr !important;
     gap: var(--space-12) !important;
+    align-items: center !important;
+  }
+  .about-story-media {
+    width: 100% !important;
+    display: flex !important;
   }
   .about-story-img {
     width: 100% !important;
-    min-height: 460px !important;
-    max-height: 520px !important;
+    max-width: 100% !important;
+    min-height: 520px !important;
+    height: 560px !important;
+    max-height: 620px !important;
     object-fit: cover !important;
-    box-shadow: var(--shadow-main);
+    border-radius: var(--radius-main) !important;
+    box-shadow: var(--shadow-main) !important;
+    display: block !important;
   }
 }
 
@@ -2153,10 +2169,10 @@ ul {
     flex-direction: column-reverse;
   }
   .about-story-img {
-    max-width: 85% !important;
+    max-width: 100% !important;
     width: 100% !important;
-    max-height: 280px !important;
-    height: 280px !important;
+    max-height: 340px !important;
+    height: 340px !important;
     object-fit: cover !important;
     object-position: center !important;
   }
