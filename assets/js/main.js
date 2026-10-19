@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
         blogCards.forEach(card => {
           const category = card.getAttribute('data-blog-cat');
           if (filter === 'all' || category === filter) {
-            card.style.display = 'block';
+            card.style.display = 'flex';
           } else {
             card.style.display = 'none';
           }
