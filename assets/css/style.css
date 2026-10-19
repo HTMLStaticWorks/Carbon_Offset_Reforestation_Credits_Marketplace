@@ -427,6 +427,8 @@ ul {
 
 .hero-content {
   max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
   color: #fff;
   z-index: 1;
 }
@@ -445,15 +447,20 @@ ul {
 .hero-actions {
   display: flex;
   gap: var(--space-4);
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
   .hero-actions {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-3);
   }
   .hero-actions .btn {
-    width: 100%;
+    width: auto;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.92rem;
     text-align: center;
   }
 }
@@ -729,7 +736,11 @@ ul {
 .footer-bottom p {
   margin-bottom: 0;
   font-size: var(--size-caption);
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--clr-text-muted);
+}
+
+[data-theme="dark"] .footer-bottom p {
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* Auth Pages Specific */
@@ -2020,11 +2031,35 @@ ul {
   z-index: 100;
 }
 
-@media (max-width: 576px) {
-  .auth-page-actions {
-    top: var(--space-4);
-    right: var(--space-4);
+@media (max-width: 768px) {
+  .auth-split-wrapper {
+    padding-top: 5.5rem !important;
+    padding-bottom: 2.5rem !important;
   }
+  .auth-form-panel {
+    padding-top: 0 !important;
+    width: 100%;
+  }
+  .auth-page-actions {
+    position: fixed !important;
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+    z-index: 999 !important;
+  }
+}
+
+/* Auth dark theme logo and typography */
+[data-theme="dark"] .auth-card .nav-logo,
+[data-theme="dark"] .auth-card .nav-logo i,
+[data-theme="dark"] .auth-brand-logo,
+[data-theme="dark"] .auth-brand-logo i {
+  color: #ffffff !important;
+}
+
+.auth-card .btn-primary {
+  white-space: nowrap !important;
+  font-size: 0.95rem !important;
+  padding-inline: 0.75rem !important;
 }
 
 @media (max-width: 900px) {
@@ -2036,8 +2071,32 @@ ul {
   }
 }
 
-/* --- Global Fix: Center last card in 4-item grids on 1024px/tablet screens --- */
-@media (min-width: 768px) and (max-width: 1100px) {
+/* --- Global Fix: Center last card in 4-item grids on 1024px screens --- */
+@media (min-width: 769px) and (max-width: 1080px) {
+  /* Home 1 Process Grid: 4 items (3 in row 1, 4th card centered in row 2) */
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .process-grid .process-card:last-child {
+    grid-column: 2 !important;
+  }
+
+  /* Home 2 Species Grid: 4 items (3 in row 1, 4th card centered in row 2) */
+  .species-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .species-grid .species-card:last-child {
+    grid-column: 2 !important;
+  }
+
+  /* About / Service Page Ecological Philosophy Values Grid: 4 items */
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .values-grid .value-card:last-child {
+    grid-column: 2 !important;
+  }
+
   .studios-grid:has(> *:last-child:nth-child(4)), 
   .guarantees-grid:has(> *:last-child:nth-child(4)), 
   .card-grid:has(> *:last-child:nth-child(4)),
@@ -2051,7 +2110,32 @@ ul {
   .card-grid > *:last-child:nth-child(4),
   .telemetry-grid > *:last-child:nth-child(4),
   div[style*="repeat(auto-fit"] > *:last-child:nth-child(4) {
-    grid-column: 2;
+    grid-column: 2 !important;
+  }
+}
+
+/* --- Home 1: Center last impact counter card on 768px screens --- */
+@media (min-width: 600px) and (max-width: 900px) {
+  .impact-counters-wrap {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .impact-counters-wrap .impact-counter-card:last-child {
+    grid-column: 2 !important;
+  }
+}
+
+/* --- Home 1: Increase Story Image Width in Desktop and 1024 --- */
+@media (min-width: 769px) {
+  .about-story-container {
+    grid-template-columns: 1fr 1.25fr !important;
+    gap: var(--space-12) !important;
+  }
+  .about-story-img {
+    width: 100% !important;
+    min-height: 460px !important;
+    max-height: 520px !important;
+    object-fit: cover !important;
+    box-shadow: var(--shadow-main);
   }
 }
 
@@ -2104,7 +2188,7 @@ ul {
   width: 3rem;
   height: 3rem;
   background-color: var(--clr-primary);
-  color: var(--clr-light);
+  color: #ffffff !important;
   border: none;
   border-radius: 50%;
   display: flex;
@@ -2120,6 +2204,12 @@ ul {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+#back-to-top i {
+  color: #ffffff !important;
+  font-size: 1.25rem;
+  display: inline-block;
+}
+
 #back-to-top.visible {
   opacity: 1;
   visibility: visible;
@@ -2133,6 +2223,7 @@ ul {
 
 [data-theme="dark"] #back-to-top {
   background-color: var(--clr-secondary);
+  color: #ffffff !important;
 }
 [data-theme="dark"] #back-to-top:hover {
   background-color: var(--clr-primary);

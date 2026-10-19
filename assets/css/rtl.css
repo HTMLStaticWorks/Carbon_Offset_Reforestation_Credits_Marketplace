@@ -47,3 +47,15 @@ html[dir="rtl"] .footer-link:hover {
   transform: translateX(-4px);
 }
 
+html[dir="rtl"] .auth-page-actions {
+  right: auto;
+  left: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .auth-page-actions {
+    right: auto !important;
+    left: 1.25rem !important;
+  }
+}
+
