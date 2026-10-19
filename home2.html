@@ -129,9 +129,11 @@
         margin-bottom: var(--space-6) !important;
       }
       .hero-split .hero-actions {
+        display: flex;
         flex-direction: row;
         align-items: center;
         gap: 1rem;
+        flex-wrap: wrap;
       }
       .hero-split .hero-actions .btn {
         width: auto;
@@ -140,6 +142,16 @@
       }
       .hero-split-image {
         min-height: 350px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-split .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-split .hero-actions .btn {
+        width: 100%;
       }
     }
   </style>
@@ -305,9 +317,9 @@
               <span class="species-scientific">Sedum Kamtschaticum</span>
               <p class="species-desc">Thrives in shallow 2-inch soils. Extreme freeze and drought tolerance with golden summer blooms.</p>
               <div class="species-meta-row">
-                <span><i class="ph ph-sun"></i> Full Sun</span>
-                <span><i class="ph ph-drop"></i> Very Low Water</span>
-                <span><i class="ph ph-shield"></i> -30°F Hardy</span>
+                <span><i class="ph ph-sun"></i><span>Full Sun</span></span>
+                <span><i class="ph ph-drop"></i><span>Very Low Water</span></span>
+                <span><i class="ph ph-shield"></i><span>-30°F Hardy</span></span>
               </div>
             </div>
           </div>
@@ -320,9 +332,9 @@
               <span class="species-scientific">Sempervivum Tectorum</span>
               <p class="species-desc">Compact rosette geometry that stores atmospheric humidity. Naturally repels urban micro-pests.</p>
               <div class="species-meta-row">
-                <span><i class="ph ph-sun"></i> Direct Sun</span>
-                <span><i class="ph ph-drop"></i> Ultra Low Water</span>
-                <span><i class="ph ph-shield"></i> -25°F Hardy</span>
+                <span><i class="ph ph-sun"></i><span>Direct Sun</span></span>
+                <span><i class="ph ph-drop"></i><span>Ultra Low Water</span></span>
+                <span><i class="ph ph-shield"></i><span>-25°F Hardy</span></span>
               </div>
             </div>
           </div>
@@ -335,9 +347,9 @@
               <span class="species-scientific">Nephrolepis Exaltata</span>
               <p class="species-desc">High-surface-area fronds that scrub VOCs and airborne dust. Ideal for indoor vertical living facades.</p>
               <div class="species-meta-row">
-                <span><i class="ph ph-cloud-sun"></i> Partial Shade</span>
-                <span><i class="ph ph-drop"></i> Automated Drip</span>
-                <span><i class="ph ph-wind"></i> Air Purifier</span>
+                <span><i class="ph ph-cloud-sun"></i><span>Partial Shade</span></span>
+                <span><i class="ph ph-drop"></i><span>Automated Drip</span></span>
+                <span><i class="ph ph-wind"></i><span>Air Purifier</span></span>
               </div>
             </div>
           </div>
@@ -350,12 +362,17 @@
               <span class="species-scientific">Allium Schoenoprasum</span>
               <p class="species-desc">Vibrant purple blossom pom-poms that attract native honeybees and swallowtail butterflies onto urban roofs.</p>
               <div class="species-meta-row">
-                <span><i class="ph ph-sun"></i> Full Sun</span>
-                <span><i class="ph ph-drop"></i> Moderate Water</span>
-                <span><i class="ph ph-flower"></i> Pollinator Safe</span>
+                <span><i class="ph ph-sun"></i><span>Full Sun</span></span>
+                <span><i class="ph ph-drop"></i><span>Moderate Water</span></span>
+                <span><i class="ph ph-flower"></i><span>Pollinator Safe</span></span>
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="fade-up" style="text-align: center; margin-top: var(--space-10);">
+          <p style="color: var(--clr-text-muted); margin-bottom: var(--space-4); font-size: 1.05rem;">Need a customized botanical specification engineered for your building envelope?</p>
+          <a href="contact.html" class="btn btn-primary">Request Botanical Spec Sheet</a>
         </div>
       </div>
     </section>
@@ -551,6 +568,18 @@
           </div>
           
         </div>
+      </div>
+    </section>
+
+    <!-- Full Width CTA -->
+    <section class="section" style="position: relative; overflow: hidden; padding-block: var(--space-32);">
+      <div style="position: absolute; inset: 0; z-index: -1;">
+        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1920&auto=format&fit=crop" alt="Forest Canopy" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.3);">
+      </div>
+      <div class="container fade-up" style="text-align: center; color: #fff;">
+        <h2 style="color: #fff; margin-bottom: var(--space-6);">Ready to Green Your Space?</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: var(--size-lead); max-width: 600px; margin-inline: auto; margin-bottom: var(--space-8);">Let's collaborate to bring sustainable, living architecture to your next project.</p>
+        <a href="contact.html" class="btn btn-primary">Request a Quotation</a>
       </div>
     </section>
 
